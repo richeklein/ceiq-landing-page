@@ -325,6 +325,69 @@
         /* border: 1px solid rgba(0, 0, 0, 0.05); */
       }
 
+      /* --- Hero Carousel --- */
+      .carousel {
+        width: 100%;
+      }
+      .carousel-track {
+        position: relative;
+        overflow: hidden;
+        /* border-radius: 0.75rem; */
+        /* box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); */
+        /* border: 1px solid rgba(0, 0, 0, 0.05); */
+        /* background: #fff; */
+      }
+      .carousel-slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transform: scale(0.985);
+        transition: opacity 400ms ease, transform 400ms ease;
+      }
+      .carousel-slide.is-active {
+        position: relative;
+        opacity: 1;
+        transform: scale(1);
+      }
+      .carousel-slide img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+      .carousel-dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding-top: 0.75rem;
+      }
+      .carousel-dots .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 9999px;
+        background: #d1d5db; /* gray-300 */
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        transition: background-color 200ms ease, transform 200ms ease;
+      }
+      .carousel-dots .dot.is-active {
+        background: var(--color-primary);
+        transform: scale(1.1);
+      }
+      .carousel-dots .dot:focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .carousel-slide {
+          transition: none;
+        }
+        .carousel-dots .dot {
+          transition: none;
+        }
+      }
+
       /* --- Social Proof --- */
       .social-proof {
         padding: 3rem 0;
@@ -761,10 +824,36 @@
               </div>
             </div>
             <div>
-              <img
-                src="./images/dashboard.png"
-                alt="CEIQ Platform Screenshot"
-                class="hero-screenshot" />
+              <div class="carousel" id="heroCarousel" aria-label="Product screenshots">
+                <div class="carousel-track">
+                  <div class="carousel-slide is-active" id="slide-1">
+                    <img src="images/dashboard-1.png" alt="Dashboard view 1" loading="eager" />
+                  </div>
+                  <div class="carousel-slide" id="slide-2">
+                    <img src="images/dashboard-2.png" alt="Dashboard view 2" loading="lazy" />
+                  </div>
+                  <div class="carousel-slide" id="slide-3">
+                    <img src="images/dashboard-3.png" alt="Dashboard view 3" loading="lazy" />
+                  </div>
+                </div>
+                <div class="carousel-dots" role="tablist" aria-label="Screenshot navigation">
+                  <button
+                    class="dot is-active"
+                    aria-label="Slide 1"
+                    aria-controls="slide-1"
+                    aria-selected="true"></button>
+                  <button
+                    class="dot"
+                    aria-label="Slide 2"
+                    aria-controls="slide-2"
+                    aria-selected="false"></button>
+                  <button
+                    class="dot"
+                    aria-label="Slide 3"
+                    aria-controls="slide-3"
+                    aria-selected="false"></button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1029,6 +1118,57 @@
               closeMenu()
             })
           })
+        }
+
+        // Hero Carousel
+        const carousel = document.getElementById('heroCarousel')
+        if (carousel) {
+          const slides = Array.from(carousel.querySelectorAll('.carousel-slide'))
+          const dots = Array.from(carousel.querySelectorAll('.dot'))
+          let index = 0
+          const intervalMs = 5000
+          let timerId = null
+
+          function setActive(newIndex) {
+            // bounds
+            const prev = index
+            index = (newIndex + slides.length) % slides.length
+            // update slides
+            slides[prev].classList.remove('is-active')
+            slides[index].classList.add('is-active')
+            // update dots
+            dots[prev].classList.remove('is-active')
+            dots[prev].setAttribute('aria-selected', 'false')
+            dots[index].classList.add('is-active')
+            dots[index].setAttribute('aria-selected', 'true')
+          }
+
+          function next() {
+            setActive(index + 1)
+          }
+
+          function start() {
+            stop()
+            timerId = window.setInterval(next, intervalMs)
+          }
+          function stop() {
+            if (timerId) window.clearInterval(timerId)
+            timerId = null
+          }
+
+          // Dot clicks
+          dots.forEach((btn, i) => {
+            btn.addEventListener('click', () => {
+              setActive(i)
+              start()
+            })
+          })
+
+          // Optional: pause on hover for better UX
+          carousel.addEventListener('mouseenter', stop)
+          carousel.addEventListener('mouseleave', start)
+
+          start()
         }
 
         // Video Modal functionality
