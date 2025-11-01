@@ -1,20 +1,30 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# CEIQ Landing Page
 
-# Run and deploy your AI Studio app
+A simple, responsive marketing landing page for CEIQ focused on clear messaging and conversion.
 
-This contains everything you need to run your app locally.
+## Overview
+- Hero section with value proposition and primary CTA
+- Features/benefits highlights
+- Social proof (logos/testimonials)
+- Pricing or plans (optional)
+- FAQ and footer with contact links
+- Mobile-first, accessible, and SEO-friendly (meta, Open Graph)
 
-View your app in AI Studio: https://ai.studio/apps/drive/1XpOCFLhSTQRz-A6dB9bxxNXWrmigbGnH
+## Tech
+- Static HTML/CSS/JS (framework-agnostic)
+- Lightweight assets and lazy loading where applicable
 
-## Run Locally
+## Run locally
+- Open index.html in a browser, or serve the folder:
+  - If Node.js is installed: npx serve .
 
-**Prerequisites:**  Node.js
+## Customize
+- Update text/content in the section markup
+- Replace images and icons in the assets folder
+- Adjust styles in the main stylesheet
 
+## Deploy
+- Host on any static provider (GitHub Pages, Netlify, Vercel)
+- Upload the built/static files and point your domain
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+Note: Update this README with exact stack and paths if the implementation differs.
