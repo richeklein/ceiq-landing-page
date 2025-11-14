@@ -395,37 +395,65 @@
       }
       .social-proof h2 {
         text-align: center;
-        font-size: 0.875rem;
-        font-weight: 600;
-        color: var(--color-text-light);
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 800;
+        color: #111827;
+        letter-spacing: -0.01em;
       }
-      .logos-container {
+      .collective-card {
         margin-top: 2rem;
+        background: #f9fafb;
+        border-radius: 1.25rem;
+        padding: 2rem;
+        box-shadow: 0 20px 35px -15px rgba(15, 23, 42, 0.25);
+      }
+      .collective-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        align-items: center;
+      }
+      .collective-visual {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        background: linear-gradient(135deg, #dbeafe, #ede9fe);
+      }
+      .collective-visual svg {
+        width: 220px;
+        max-width: 100%;
+        height: auto;
+        color: var(--color-primary);
+      }
+      .collective-content p {
+        font-size: 1.1rem;
+        color: var(--color-text-medium);
+        line-height: 1.75;
+      }
+      .collective-pill-group {
+        margin-top: 1.5rem;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        gap: 0.75rem;
+      }
+      .collective-pill {
+        display: inline-flex;
         align-items: center;
-        gap: 2rem 3rem;
+        gap: 0.35rem;
+        padding: 0.35rem 0.9rem;
+        border-radius: 9999px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        background: white;
+        color: var(--color-primary);
+        box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.2);
       }
-      .logo-item {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        color: #9ca3af;
-        transition: color 0.2s ease-in-out;
-      }
-      .logo-item:hover {
-        color: var(--color-text-medium);
-      }
-      .logo-item svg {
-        height: 1.5rem;
-        width: 1.5rem;
-      }
-      .logo-item span {
-        font-size: 1.125rem;
-        font-weight: 500;
+      .collective-pill svg {
+        width: 16px;
+        height: 16px;
       }
 
       /* --- Features Section --- */
@@ -444,6 +472,16 @@
       .features .section-header h2 {
         margin-top: 0.5rem;
         font-size: 2.25rem;
+        display: grid;
+        gap: 0.35rem;
+        justify-content: center;
+      }
+      .features .section-header h2 span {
+        display: block;
+        line-height: 1.15;
+      }
+      .features .section-header h2 span.accent {
+        color: var(--color-primary);
       }
       .features .section-header p {
         margin-top: 1rem;
@@ -632,6 +670,20 @@
           grid-template-columns: repeat(3, 1fr);
           gap: 2rem;
         }
+        .features .section-header h2 {
+          font-size: 3rem;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.35rem 0.75rem;
+          text-align: center;
+        }
+        .features .section-header h2 span {
+          display: inline-flex;
+          white-space: nowrap;
+        }
+        .collective-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
         .footer-about {
           grid-column: span 1 / span 1;
         }
@@ -801,12 +853,13 @@
               <h1>
                 The future-ready
                 <br />
-                <span class="highlight">community engagement</span>
+                <span class="highlight">community empowerment</span>
                 platform
               </h1>
               <p>
-                Redefining K-12 stakeholder intelligence with intuitive tools to streamline survey
-                design, data analysis, and actionable insights aligned to resiliency standards.
+                Redefining K-12 stakeholder engagement with intuitive tools to streamline survey
+                design, data analysis, and actionable insights driven by AI technology and aligned
+                with your state's engagement standards built for individual schools and districts.
               </p>
               <div class="hero-actions">
                 <a href="#" class="btn btn-primary">Request a demo</a>
@@ -861,51 +914,76 @@
 
       <section class="social-proof">
         <div class="container">
-          <h2>Trusted by leading school districts and educational partners</h2>
-          <div class="logos-container">
-            <div class="logo-item">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path d="M10 20V12H14V20H19V10H22L12 3L2 10H5V20H10Z"></path>
-              </svg>
-              <span>District A</span>
-            </div>
-            <div class="logo-item">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4Z"></path>
-              </svg>
-              <span>EduGroup</span>
-            </div>
-            <div class="logo-item">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M20 22H4C2.9 22 2 21.1 2 20V4C2 2.9 2.9 2 4 2H20C21.1 2 22 2.9 22 4V20C22 21.1 21.1 22 20 22M4 4V20H20V4H4Z"></path>
-              </svg>
-              <span>School System B</span>
-            </div>
-            <div class="logo-item">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"></path>
-              </svg>
-              <span>Learning Co.</span>
-            </div>
-            <div class="logo-item">
-              <svg viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M11 15H13V17H11V15M11 7H13V13H11V7M12 2C6.47 2 2 6.5 2 12A10 10 0 0 0 12 22A10 10 0 0 0 22 12A10 10 0 0 0 12 2M12 20A8 8 0 0 1 4 12A8 8 0 0 1 12 4A8 8 0 0 1 20 12A8 8 0 0 1 12 20Z"></path>
-              </svg>
-              <span>Innovate K-12</span>
+          <h2>Our Collective Intelligence Model</h2>
+          <div class="collective-card">
+            <div class="collective-grid">
+              <div class="collective-visual" aria-hidden="true">
+                <svg viewBox="0 0 360 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="nodeGradient" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stop-color="#60A5FA" />
+                      <stop offset="100%" stop-color="#A78BFA" />
+                    </linearGradient>
+                  </defs>
+                  <g stroke="rgba(37,99,235,0.35)" stroke-width="2">
+                    <path d="M60 60L180 40L300 70" />
+                    <path d="M60 60L90 170L180 200L270 170L300 70" />
+                    <path d="M90 170L150 110L210 120L270 170" />
+                    <path d="M150 110L180 40L210 120" />
+                  </g>
+                  <g fill="url(#nodeGradient)" stroke="white" stroke-width="3">
+                    <circle cx="60" cy="60" r="18" />
+                    <circle cx="90" cy="170" r="16" />
+                    <circle cx="150" cy="110" r="14" />
+                    <circle cx="180" cy="40" r="20" />
+                    <circle cx="210" cy="120" r="14" />
+                    <circle cx="270" cy="170" r="16" />
+                    <circle cx="300" cy="70" r="18" />
+                  </g>
+                </svg>
+              </div>
+              <div class="collective-content">
+                <p>
+                  CEIQ integrates expert partnerships across technology and education, uniting
+                  Community Empowerment Experts, Ed-Tech Innovators, and Organizational
+                  Stakeholders. Together we create a collective intelligence uniquely designed to
+                  advance your district's most important engagement goals and opportunities.
+                </p>
+                <div class="collective-pill-group">
+                  <div class="collective-pill">
+                    <svg viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M10 0L3 4v6c0 5 3 8 7 10c4-2 7-5 7-10V4l-7-4Z" />
+                    </svg>
+                    Community Empowerment
+                  </div>
+                  <div class="collective-pill">
+                    <svg viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M2 4h16v2H2V4Zm2 4h12v2H4V8Zm3 4h6v2H7v-2Z" />
+                    </svg>
+                    Ed-Tech Innovation
+                  </div>
+                  <div class="collective-pill">
+                    <svg viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M4 4a2 2 0 0 0-2 2v8c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4Zm6 9l-4-3h8l-4 3Z" />
+                    </svg>
+                    Strategic Stakeholders
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
       </section>
 
       <section id="features" class="features">
         <div class="container">
           <div class="section-header">
             <p class="subtitle">The Complete Platform</p>
-            <h2>K-12 Stakeholder Intelligence</h2>
+            <h2>
+              <span>Stakeholder Intelligence.</span>
+              <span class="accent">Elevated.</span>
+              <span>Community Empowerment.</span>
+              <span class="accent">Achieved.</span>
+            </h2>
             <p>
               CEIQ provides the insights, tools, and expert support to assess, strengthen, and align
               your school-community relationship. AI-powered tools deliver actionable intelligence,
@@ -953,8 +1031,10 @@
               </div>
               <h3>Advanced Filtering & Analytics</h3>
               <p>
-                Demographic and grade-band filtering reveals hidden patterns and enables targeted
-                interventions where they matter most.
+                Advanced demographic and grade band filtering to uncover hidden patterns driven by
+                external and internal challenges. By clearly identifying the "soft practices" that
+                hinder community progress, we empower you with precise, effective action where it
+                matters most.
               </p>
             </div>
             <div class="feature-card">
