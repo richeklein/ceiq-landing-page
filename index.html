@@ -524,6 +524,9 @@
       .feature-icon-3 {
         background-color: #8b5cf6;
       }
+      .feature-icon-4 {
+        background-color: #0ea5e9;
+      }
       .feature-card h3 {
         margin-top: 1.5rem;
         font-size: 1.25rem;
@@ -661,7 +664,7 @@
           display: none;
         }
         .features-grid {
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
         .footer-links-grid {
           grid-template-columns: repeat(4, 1fr);
@@ -710,6 +713,9 @@
         }
         .hero-actions {
           justify-content: flex-start;
+        }
+        .features-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
       }
 
@@ -819,7 +825,7 @@
         <div class="header-actions">
           <a href="#" class="btn btn-tertiary">Log in</a>
           <!-- <a href="#" class="btn btn-secondary">Request a demo</a> -->
-          <a href="#" class="btn btn-primary">Request a demo</a>
+          <a href="#" class="btn btn-primary">Request a Demo</a>
         </div>
         <button
           id="mobile-menu-button"
@@ -838,7 +844,7 @@
         </nav>
         <div class="header-actions-mobile">
           <a href="#" class="btn btn-tertiary">Log in</a>
-          <a href="#" class="btn btn-secondary">Request a demo</a>
+          <a href="#" class="btn btn-secondary">Request a Demo</a>
         </div>
       </div>
     </header>
@@ -862,7 +868,7 @@
                 with your state's engagement standards built for individual schools and districts.
               </p>
               <div class="hero-actions">
-                <a href="#" class="btn btn-primary">Request a demo</a>
+                <a href="#" class="btn btn-primary">Request a Demo</a>
                 <button id="videoBtn" class="btn btn-video">
                   <svg
                     width="20"
@@ -1059,6 +1065,31 @@
                 maintaining consistency and data integrity.
               </p>
             </div>
+            <div class="feature-card">
+              <div class="feature-icon feature-icon-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8"
+                  style="color: white"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2">
+                  <rect x="4" y="4" width="16" height="16" rx="2" ry="2" />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 9h6v6H9zM12 2v2M12 20v2M2 12h2M20 12h2M6 2v2M6 20v2M18 2v2M18 20v2" />
+                </svg>
+              </div>
+              <h3>EmpowerAI: Data to Decisive Action</h3>
+              <p>
+                EmpowerAI turns data into decisive action. Analyzing school data and survey
+                responses, this sophisticated agent uncovers critical leverage points. It delivers
+                the tailored, strategic guidance needed to accelerate engagement and achieve your
+                community goals.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -1082,10 +1113,9 @@
               </svg>
             </div>
             <div class="cta-content">
-              <h2>Ready to Transform Your District's Community Engagement?</h2>
+              <h2>Ready to Transform Your School or District?</h2>
               <p>
-                See how CEIQ helps K-12 leaders move from data collection to measurable
-                action—aligned with resiliency standards and powered by AI guidance.
+                Learn how CEIQ bridges the gap from data collection to measurable action.
               </p>
               <a href="#" class="btn">Schedule Your Demo</a>
             </div>
@@ -1101,7 +1131,7 @@
             <a href="#" class="logo">
               <img src="images/logo.png" alt="CEIQ Logo" />
             </a>
-            <p>The data-driven platform for comprehensive community engagement.</p>
+            <p>The data-driven platform for comprehensive community empowerment.</p>
           </div>
           <div class="footer-links-container">
             <div class="footer-links-grid">
