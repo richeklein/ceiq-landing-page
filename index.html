@@ -14,6 +14,9 @@
       :root {
         --color-primary: #2563eb; /* blue-600 */
         --color-primary-hover: #1d4ed8; /* blue-700 */
+        --color-accent: #f97316; /* orange-500 */
+        --color-deep: #0f172a;
+        --color-muted: #e2e8f0;
         --color-light-bg: #f8f9fc;
         --color-text-dark: #1f2937; /* gray-800 */
         --color-text-medium: #4b5563; /* gray-600 */
@@ -50,16 +53,16 @@
       }
 
       h1 {
-        font-size: 2.5rem;
-        line-height: 1.1;
+        font-size: 2.25rem;
+        line-height: 1.08;
       }
       h2 {
-        font-size: 2rem;
-        line-height: 1.2;
+        font-size: 1.75rem;
+        line-height: 1.15;
       }
       h3 {
-        font-size: 1.25rem;
-        line-height: 1.25;
+        font-size: 1.125rem;
+        line-height: 1.2;
       }
 
       p {
@@ -142,7 +145,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 5rem; /* 80px */
+        height: 4rem; /* tightened */
       }
       .logo {
         display: flex;
@@ -150,12 +153,12 @@
         gap: 0.5rem;
       }
       .logo img {
-        height: 32px;
+        height: 28px; /* tightened */
         width: auto;
         object-fit: contain;
       }
       .logo-text {
-        font-size: 1.5rem;
+        font-size: 1.375rem; /* tightened */
         font-weight: 800;
         color: #111827;
       }
@@ -164,14 +167,20 @@
       }
       .nav-links a {
         color: var(--color-text-medium);
-        font-weight: 500;
-        padding: 0.5rem 0.75rem;
+        font-weight: 600;
+        padding: 0.25rem 0.5rem; /* tighter */
       }
       .nav-links a:hover {
         color: var(--color-primary);
       }
       .header-actions {
         display: none;
+      }
+      .btn-compact {
+        /* for tighter header buttons */
+        padding: 0.5rem 0.9rem;
+        border-radius: 0.5rem;
+        font-size: 0.95rem;
       }
       .mobile-menu-button {
         display: flex;
@@ -241,6 +250,7 @@
         padding: 5rem 0;
         position: relative;
         overflow: hidden;
+        background: linear-gradient(135deg, #eef2ff 0%, #f5f3ff 45%, #eff6ff 100%);
       }
       .hero .container {
         position: relative;
@@ -289,7 +299,7 @@
       .hero-grid {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2.5rem; /* tightened */
         align-items: center;
       }
       .hero-content {
@@ -306,6 +316,51 @@
         font-size: 1.125rem;
         max-width: 36rem;
       }
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.35rem 0.9rem;
+        border-radius: 9999px;
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        background: rgba(37, 99, 235, 0.1);
+        color: var(--color-primary);
+        font-weight: 700;
+      }
+      .hero-proof-list {
+        margin-top: 1.5rem;
+        list-style: none;
+        display: grid;
+        gap: 0.75rem;
+        text-align: left;
+      }
+      .hero-proof-list li {
+        display: flex;
+        gap: 0.75rem;
+        font-weight: 600;
+        color: var(--color-text-dark);
+      }
+      .hero-proof-icon {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 9999px;
+        border: 2px solid rgba(37, 99, 235, 0.25);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        color: var(--color-primary);
+        font-weight: 700;
+      }
+      .video-hook {
+        margin-top: 1rem;
+        font-size: 0.95rem;
+        color: var(--color-text-medium);
+        max-width: 32rem;
+      }
       .hero-actions {
         margin-top: 2rem;
         display: flex;
@@ -318,11 +373,363 @@
         width: 100%;
       }
 
+      .hero-visual {
+        position: relative;
+        width: 100%;
+        max-width: 680px;
+        margin: 0 auto;
+        border-radius: 1.25rem;
+        overflow: hidden;
+        background-color: #fff;
+        box-shadow: 0 28px 60px -38px rgba(15, 23, 42, 0.55);
+        isolation: isolate;
+      }
+      .hero-visual::before {
+        content: '';
+        position: absolute;
+        top: -8%;
+        left: -14%;
+        width: 20%;
+        height: 116%;
+        background: linear-gradient(210deg, rgba(37, 99, 235, 0.95), rgba(124, 58, 237, 0.8));
+        transform: skewX(-12deg);
+        opacity: 0.85;
+        z-index: 2;
+        pointer-events: none;
+      }
+      .hero-visual::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 90% 20%, rgba(255, 255, 255, 0.14), transparent 55%);
+        z-index: 2;
+        pointer-events: none;
+      }
+      .hero-visual img {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: inherit;
+      }
+
       .hero-screenshot {
         width: 100%;
         /* border-radius: 0.75rem; */
         /* box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1); */
         /* border: 1px solid rgba(0, 0, 0, 0.05); */
+      }
+
+      /* --- Storyline Section --- */
+      .storyline {
+        padding: 4rem 0;
+        background: #ffffff; /* switched from dark to white */
+        color: var(--color-text-dark);
+      }
+      .storyline header {
+        text-align: center;
+        margin-bottom: 2.5rem;
+      }
+      .storyline header h2 {
+        color: var(--color-text-dark);
+      }
+      .storyline header p {
+        color: var(--color-text-medium);
+        margin-top: 1rem;
+        max-width: 48rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .storyline .cartoon-title {
+        color: var(--color-text-light);
+      }
+      .storyline-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .cartoon-frame {
+        background: rgba(15, 23, 42, 0.6);
+        border: 1px solid rgba(226, 232, 240, 0.15);
+        border-radius: 1.25rem;
+        padding: 2rem;
+        box-shadow: 0 25px 45px rgba(6, 11, 24, 0.6);
+      }
+      .cartoon-title {
+        text-transform: uppercase;
+        font-size: 0.875rem;
+        letter-spacing: 0.1em;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 1rem;
+      }
+      .cartoon-strip {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 1rem;
+      }
+      .cartoon-panel {
+        border-radius: 0.75rem;
+        padding: 1.25rem;
+        background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(79, 70, 229, 0.1));
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        min-height: 140px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .cartoon-panel span {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .cartoon-panel strong {
+        font-size: 1rem;
+        color: white;
+      }
+      .storyline-insights {
+        background: white;
+        color: var(--color-text-dark);
+        border-radius: 1.25rem;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        box-shadow: 0 20px 35px -15px rgba(15, 23, 42, 0.18); /* match collective card vibe */
+        border: 1px solid rgba(226, 232, 240, 0.6);
+      }
+      /* Right-side collective card tweaks inside storyline */
+      .storyline .collective-card {
+        margin-top: 0;
+        background: #f9fafb;
+        border: 1px solid rgba(226, 232, 240, 0.6);
+        box-shadow: 0 20px 35px -15px rgba(15, 23, 42, 0.18);
+      }
+      .storyline .collective-card .collective-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+      .storyline .collective-content h3 {
+        font-size: 1.25rem;
+        color: #111827;
+        margin-bottom: 0.5rem;
+      }
+      .storyline .collective-content p {
+        color: var(--color-text-medium);
+      }
+      .storyline .collective-content .collective-visual {
+        margin: 0.75rem 0 1rem;
+      }
+      .insights-eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--color-accent);
+      }
+      .storyline-insights h3 {
+        font-size: 1.75rem;
+        color: var(--color-text-dark);
+      }
+      .insights-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      .insights-list li {
+        display: flex;
+        gap: 0.75rem;
+        align-items: flex-start;
+        color: var(--color-text-medium);
+        font-weight: 600;
+      }
+      .insights-list strong {
+        display: block;
+        color: var(--color-text-dark);
+        font-size: 1rem;
+      }
+      .insights-list p {
+        margin-top: 0.25rem;
+        font-weight: 400;
+        color: var(--color-text-medium);
+      }
+      .insights-icon {
+        width: 1rem;
+        margin-top: 0.35rem;
+        color: var(--color-primary);
+      }
+      .insights-cta {
+        margin-top: 0.5rem;
+        font-size: 0.95rem;
+        color: var(--color-text-medium);
+      }
+
+      /* --- Weekly Resources --- */
+      .resources {
+        padding: 5rem 0;
+        background: #fff;
+      }
+      .resources .section-header {
+        text-align: center;
+        max-width: 52rem;
+        margin: 0 auto 3rem;
+      }
+      .resources .section-header p {
+        margin-top: 1rem;
+        color: var(--color-text-medium);
+      }
+      .resources-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .resource-highlight {
+        background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(15, 23, 42, 0.08));
+        border: 1px solid rgba(37, 99, 235, 0.15);
+        border-radius: 1.25rem;
+        padding: 2rem;
+      }
+      .resource-highlight h3 {
+        font-size: 1.5rem;
+      }
+      .resource-form {
+        margin-top: 1.5rem;
+        display: grid;
+        gap: 1rem;
+      }
+      .resource-form .form-row {
+        display: grid;
+        gap: 1rem;
+      }
+      .resource-form input,
+      .resource-form select {
+        width: 100%;
+        padding: 0.85rem 1rem;
+        border-radius: 0.75rem;
+        border: 1px solid rgba(15, 23, 42, 0.1);
+        font-size: 1rem;
+        font-family: inherit;
+        background: white;
+      }
+      .resource-form button {
+        margin-top: 0.5rem;
+        width: 100%;
+        border: 0;
+      }
+      .resource-preview {
+        margin-top: 1.5rem;
+        border: 1px dashed rgba(37, 99, 235, 0.4);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        background: white;
+      }
+      .resource-preview h4 {
+        color: var(--color-primary);
+        margin-bottom: 0.6rem;
+      }
+      .resource-preview p {
+        color: var(--color-text-medium);
+      }
+      .resource-preview .btn-secondary {
+        margin-top: 1rem;
+        width: 100%;
+        background: #eff6ff;
+        border-color: transparent;
+      }
+      .resource-preview small {
+        display: inline-block;
+        margin-top: 0.75rem;
+        color: var(--color-text-light);
+      }
+      .blog-showcase {
+        background: #ffffff;
+        color: var(--color-text-dark);
+        border-radius: 1.25rem;
+        padding: 2rem;
+        border: 1px solid rgba(226, 232, 240, 0.6);
+        box-shadow: 0 20px 35px -15px rgba(15, 23, 42, 0.18);
+      }
+      .blog-showcase h3 {
+        color: var(--color-text-dark);
+      }
+      .blog-cards {
+        margin-top: 1.5rem;
+        display: grid;
+        gap: 1rem;
+      }
+      .blog-card {
+        background: #ffffff;
+        border-radius: 1rem;
+        padding: 1.25rem 1.5rem;
+        border: 1px solid rgba(226, 232, 240, 0.8);
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        transition: box-shadow 0.2s ease, transform 0.2s ease;
+      }
+      .blog-card:hover {
+        box-shadow: 0 12px 24px -12px rgba(15, 23, 42, 0.16);
+        transform: translateY(-1px);
+      }
+      .blog-card h4 {
+        color: #111827;
+        font-size: 1.1rem;
+      }
+      .blog-tag {
+        font-size: 0.7rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--color-accent);
+      }
+      .btn-link {
+        color: var(--color-primary);
+        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+      }
+      .blog-card h4 a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+      .blog-card h4 a:hover {
+        color: var(--color-primary);
+      }
+      .blog-card h4 a:focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+        border-radius: 0.25rem;
+      }
+      .resource-checkbox {
+        display: grid;
+        grid-template-columns: 1.15rem 1fr;
+        column-gap: 0.6rem;
+        align-items: center;
+        font-size: 0.95rem;
+        color: var(--color-text-medium);
+      }
+      .resource-checkbox input {
+        margin-top: 0;
+        width: 1.15rem;
+        height: 1.15rem;
+        accent-color: var(--color-primary);
+      }
+      .resource-checkbox span {
+        line-height: 1.4;
+      }
+      .newsletter-note {
+        margin-top: 1.25rem;
+        font-size: 0.9rem;
+        color: var(--color-text-light);
+      }
+      .resource-form input:focus-visible,
+      .resource-form select:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+        border-color: rgba(37, 99, 235, 0.6);
       }
 
       /* --- Hero Carousel --- */
@@ -459,6 +866,14 @@
       /* --- Features Section --- */
       .features {
         padding: 5rem 0;
+      }
+      .features-carousel-wrapper {
+        margin-top: 3rem;
+        border-radius: 1.25rem;
+        overflow: hidden;
+        background: transparent;
+        border: none;
+        box-shadow: none;
       }
       .features .section-header {
         text-align: center;
@@ -630,10 +1045,10 @@
       /* --- Media Queries (Desktop First) --- */
       @media (min-width: 640px) {
         h1 {
-          font-size: 3rem;
+          font-size: 2.75rem; /* was 3rem */
         }
         h2 {
-          font-size: 2.5rem;
+          font-size: 2.25rem; /* was 2.5rem */
         }
         .hero-actions {
           flex-direction: row;
@@ -645,7 +1060,7 @@
           padding: 3rem;
         }
         .cta-content h2 {
-          font-size: 2.25rem;
+          font-size: 2rem; /* slightly tighter */
         }
       }
 
@@ -693,6 +1108,19 @@
         .footer-links-container {
           grid-column: span 2 / span 2;
         }
+        .hero-proof-list {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .storyline-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 2.5rem;
+        }
+        .resources-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .resource-form .form-row {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
       }
 
       @media (min-width: 1024px) {
@@ -700,22 +1128,36 @@
           --container-padding: 2rem;
         }
         h1 {
-          font-size: 3.75rem;
+          font-size: 3.25rem; /* was 3.75rem */
         }
         h2 {
-          font-size: 3rem;
+          font-size: 2.5rem; /* was 3rem */
         }
         .hero-grid {
           grid-template-columns: 1fr 1fr;
+          align-items: stretch;
         }
         .hero-content {
           text-align: left;
         }
         .hero-actions {
           justify-content: flex-start;
+          align-items: flex-start;
+          margin-left: 10px;
+        }
+        .hero-visual {
+          height: 100%;
+          display: flex;
+        }
+        .hero-visual img {
+          height: 100%;
+          object-fit: cover;
         }
         .features-grid {
           grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .resources-grid {
+          grid-template-columns: 1.1fr 0.9fr;
         }
       }
 
@@ -751,7 +1193,8 @@
       .video-modal-content {
         position: relative;
         width: 90%;
-        max-width: 900px;
+        max-width: 520px;
+        margin: 0 auto;
         margin: auto;
         animation: slideIn 0.3s;
       }
@@ -818,14 +1261,15 @@
           <img src="images/logo.png" alt="CEIQ Logo" />
         </a>
         <nav class="nav-links">
-          <!-- <a href="#features">Our Approach</a> -->
-          <!-- <a href="#">Why CEIQ?</a> -->
-          <!-- <a href="#">Pricing</a> -->
+          <a href="#storyline">Story</a>
+          <a href="#features">Platform</a>
+          <a href="#weekly-resources">Resources</a>
+          <a href="/blog">Blog</a>
         </nav>
         <div class="header-actions">
-          <a href="#" class="btn btn-tertiary">Log in</a>
+          <a href="#" class="btn btn-tertiary btn-compact">Log in</a>
           <!-- <a href="#" class="btn btn-secondary">Request a demo</a> -->
-          <a href="#" class="btn btn-primary">Request a Demo</a>
+          <a href="#" class="btn btn-primary btn-compact">Request a Demo</a>
         </div>
         <button
           id="mobile-menu-button"
@@ -838,13 +1282,14 @@
       <!-- Mobile Menu -->
       <div id="mobile-menu">
         <nav class="nav-links-mobile">
-          <a href="#features">Our Approach</a>
-          <a href="#">Why CEIQ?</a>
-          <a href="#">Pricing</a>
+          <a href="#storyline">Story</a>
+          <a href="#features">Platform</a>
+          <a href="#weekly-resources">Resources</a>
+          <a href="/blog">Blog</a>
         </nav>
         <div class="header-actions-mobile">
-          <a href="#" class="btn btn-tertiary">Log in</a>
-          <a href="#" class="btn btn-secondary">Request a Demo</a>
+          <a href="#" class="btn btn-tertiary btn-compact">Log in</a>
+          <a href="#" class="btn btn-secondary btn-compact">Request a Demo</a>
         </div>
       </div>
     </header>
@@ -867,6 +1312,23 @@
                 design, data analysis, and actionable insights driven by AI technology and aligned
                 with your state's engagement standards built for individual schools and districts.
               </p>
+              <ul class="hero-proof-list">
+                <li>
+                  <span class="hero-proof-icon">1</span>
+                  Correlate individual community actions to attendance, retention, and academic
+                  gains.
+                </li>
+                <li>
+                  <span class="hero-proof-icon">2</span>
+                  Validate budgets with indisputable evidence showing where engagement resources
+                  move the needle.
+                </li>
+                <li>
+                  <span class="hero-proof-icon">3</span>
+                  Build a predictive blueprint that forecasts which programs will improve climate
+                  and student success.
+                </li>
+              </ul>
               <div class="hero-actions">
                 <a href="#" class="btn btn-primary">Request a Demo</a>
                 <button id="videoBtn" class="btn btn-video">
@@ -882,102 +1344,148 @@
                 </button>
               </div>
             </div>
-            <div>
-              <div class="carousel" id="heroCarousel" aria-label="Product screenshots">
-                <div class="carousel-track">
-                  <div class="carousel-slide is-active" id="slide-1">
-                    <img src="images/dashboard-1.png" alt="Dashboard view 1" loading="eager" />
-                  </div>
-                  <div class="carousel-slide" id="slide-2">
-                    <img src="images/dashboard-2.png" alt="Dashboard view 2" loading="lazy" />
-                  </div>
-                  <div class="carousel-slide" id="slide-3">
-                    <img src="images/dashboard-3.png" alt="Dashboard view 3" loading="lazy" />
-                  </div>
-                </div>
-                <div class="carousel-dots" role="tablist" aria-label="Screenshot navigation">
-                  <button
-                    class="dot is-active"
-                    aria-label="Slide 1"
-                    aria-controls="slide-1"
-                    aria-selected="true"></button>
-                  <button
-                    class="dot"
-                    aria-label="Slide 2"
-                    aria-controls="slide-2"
-                    aria-selected="false"></button>
-                  <button
-                    class="dot"
-                    aria-label="Slide 3"
-                    aria-controls="slide-3"
-                    aria-selected="false"></button>
-                </div>
-              </div>
+            <div class="hero-visual">
+              <img
+                src="images/hero-2.jpg"
+                alt="District leaders collaborate using CEIQ dashboards during a planning session"
+                loading="lazy" />
             </div>
           </div>
         </div>
       </section>
 
-      <section class="social-proof">
+      <section id="storyline" class="storyline">
         <div class="container">
-          <h2>Our Collective Intelligence Model</h2>
-          <div class="collective-card">
-            <div class="collective-grid">
-              <div class="collective-visual" aria-hidden="true">
-                <svg viewBox="0 0 360 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <linearGradient id="nodeGradient" x1="0" y1="0" x2="1" y2="1">
-                      <stop offset="0%" stop-color="#60A5FA" />
-                      <stop offset="100%" stop-color="#A78BFA" />
-                    </linearGradient>
-                  </defs>
-                  <g stroke="rgba(37,99,235,0.35)" stroke-width="2">
-                    <path d="M60 60L180 40L300 70" />
-                    <path d="M60 60L90 170L180 200L270 170L300 70" />
-                    <path d="M90 170L150 110L210 120L270 170" />
-                    <path d="M150 110L180 40L210 120" />
-                  </g>
-                  <g fill="url(#nodeGradient)" stroke="white" stroke-width="3">
-                    <circle cx="60" cy="60" r="18" />
-                    <circle cx="90" cy="170" r="16" />
-                    <circle cx="150" cy="110" r="14" />
-                    <circle cx="180" cy="40" r="20" />
-                    <circle cx="210" cy="120" r="14" />
-                    <circle cx="270" cy="170" r="16" />
-                    <circle cx="300" cy="70" r="18" />
-                  </g>
-                </svg>
-              </div>
-              <div class="collective-content">
-                <p>
-                  CEIQ integrates expert partnerships across technology and education, uniting
-                  Community Empowerment Experts, Ed-Tech Innovators, and Organizational
-                  Stakeholders. Together we create a collective intelligence uniquely designed to
-                  advance your district's most important engagement goals and opportunities.
-                </p>
-                <div class="collective-pill-group">
-                  <div class="collective-pill">
-                    <svg viewBox="0 0 20 20" fill="currentColor">
-                      <path d="M10 0L3 4v6c0 5 3 8 7 10c4-2 7-5 7-10V4l-7-4Z" />
-                    </svg>
-                    Community Empowerment
+          <header>
+            <p class="cartoon-title">Problem → Proof</p>
+            <h2>Turn engagement into measurable results.</h2>
+            <p>
+              CEIQ replaces vague perceptions with an action-level inventory of the specific,
+              critical steps that actually build resilient, high‑impact school communities. By
+              measuring what people do—not just how they feel—it gives leaders a defensible,
+              data-driven blueprint to focus investments and prove measurable results.
+            </p>
+          </header>
+          <div class="storyline-grid">
+            <div class="storyline-insights">
+              <p class="insights-eyebrow">How CEIQ resolves the storyline</p>
+              <h3>Inventory critical actions, not just feelings.</h3>
+              <p>
+                CEIQ delivers an action-level census of community engagement so you can correlate
+                behavior to academic outcomes, defend investments, and scale what works.
+              </p>
+              <ul class="insights-list">
+                <li>
+                  <svg
+                    class="insights-icon"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true">
+                    <path d="M8.5 13.5L4.5 9.5l-1.5 1.5L8.5 16.5l8.5-8.5-1.5-1.5-7 7z" />
+                  </svg>
+                  <div>
+                    <strong>Quantify the unquantifiable.</strong>
+                    <p>Convert "community vibe" into trackable metrics of individual action.</p>
                   </div>
-                  <div class="collective-pill">
-                    <svg viewBox="0 0 20 20" fill="currentColor">
-                      <path d="M2 4h16v2H2V4Zm2 4h12v2H4V8Zm3 4h6v2H7v-2Z" />
-                    </svg>
-                    Ed-Tech Innovation
+                </li>
+                <li>
+                  <svg
+                    class="insights-icon"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true">
+                    <path
+                      d="M4 10h2l2 5 3-10 2 5h3"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      fill="none" />
+                  </svg>
+                  <div>
+                    <strong>Predictive power.</strong>
+                    <p>
+                      Forecast which programs will move graduation, climate, and retention forward.
+                    </p>
                   </div>
-                  <div class="collective-pill">
-                    <svg viewBox="0 0 20 20" fill="currentColor">
-                      <path d="M4 4a2 2 0 0 0-2 2v8c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4Zm6 9l-4-3h8l-4 3Z" />
+                </li>
+                <li>
+                  <svg
+                    class="insights-icon"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true">
+                    <path d="M3 10l4 4 10-10" stroke="currentColor" stroke-width="2" fill="none" />
+                  </svg>
+                  <div>
+                    <strong>Justify your strategy.</strong>
+                    <p>Give stakeholders the undisputed evidence required to defend budgets.</p>
+                  </div>
+                </li>
+              </ul>
+              <!-- <p class="insights-cta">
+                More insights on how CEIQ transforms engagement data into actionable intelligence.
+              </p> -->
+            </div>
+            <div class="collective-card">
+              <div class="collective-grid">
+                <div class="collective-content">
+                  <h3 class="collective-heading">Our Collective Intelligence Model</h3>
+                  <div class="collective-visual" aria-hidden="true">
+                    <svg viewBox="0 0 360 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <linearGradient id="nodeGradientStory" x1="0" y1="0" x2="1" y2="1">
+                          <stop offset="0%" stop-color="#60A5FA" />
+                          <stop offset="100%" stop-color="#A78BFA" />
+                        </linearGradient>
+                      </defs>
+                      <g stroke="rgba(37,99,235,0.35)" stroke-width="2">
+                        <path d="M60 60L180 40L300 70" />
+                        <path d="M60 60L90 110L180 120L270 110L300 70" />
+                        <path d="M90 110L150 80L210 85L270 110" />
+                        <path d="M150 80L180 40L210 85" />
+                      </g>
+                      <g fill="url(#nodeGradientStory)" stroke="white" stroke-width="3">
+                        <circle cx="60" cy="60" r="14" />
+                        <circle cx="90" cy="110" r="12" />
+                        <circle cx="150" cy="80" r="10" />
+                        <circle cx="180" cy="40" r="16" />
+                        <circle cx="210" cy="85" r="10" />
+                        <circle cx="270" cy="110" r="12" />
+                        <circle cx="300" cy="70" r="14" />
+                      </g>
                     </svg>
-                    Strategic Stakeholders
+                  </div>
+                  <p>
+                    CEIQ integrates expert partnerships across technology and education, uniting
+                    Community Empowerment Experts, Ed-Tech Innovators, and Organizational
+                    Stakeholders. Together we create a collective intelligence uniquely designed to
+                    advance your district's most important engagement goals and opportunities.
+                  </p>
+                  <div class="collective-pill-group">
+                    <div class="collective-pill">
+                      <svg viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 0L3 4v6c0 5 3 8 7 10c4-2 7-5 7-10V4l-7-4Z" />
+                      </svg>
+                      Community Empowerment
+                    </div>
+                    <div class="collective-pill">
+                      <svg viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M2 4h16v2H2V4Zm2 4h12v2H4V8Zm3 4h6v2H7v-2Z" />
+                      </svg>
+                      Ed-Tech Innovation
+                    </div>
+                    <div class="collective-pill">
+                      <svg viewBox="0 0 20 20" fill="currentColor">
+                        <path
+                          d="M4 4a2 2 0 0 0-2 2v8c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4Zm6 9l-4-3h8l-4 3Z" />
+                      </svg>
+                      Strategic Stakeholders
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
       </section>
 
       <section id="features" class="features">
@@ -995,6 +1503,38 @@
               your school-community relationship. AI-powered tools deliver actionable intelligence,
               helping you uncover trends and drive informed decisions.
             </p>
+          </div>
+          <div class="features-carousel-wrapper">
+            <div class="carousel" id="heroCarousel" aria-label="Product screenshots">
+              <div class="carousel-track">
+                <div class="carousel-slide is-active" id="slide-1">
+                  <img src="images/dashboard-1.png" alt="Dashboard view 1" loading="eager" />
+                </div>
+                <div class="carousel-slide" id="slide-2">
+                  <img src="images/dashboard-2.png" alt="Dashboard view 2" loading="lazy" />
+                </div>
+                <div class="carousel-slide" id="slide-3">
+                  <img src="images/dashboard-3.png" alt="Dashboard view 3" loading="lazy" />
+                </div>
+              </div>
+              <div class="carousel-dots" role="tablist" aria-label="Screenshot navigation">
+                <button
+                  class="dot is-active"
+                  aria-label="Slide 1"
+                  aria-controls="slide-1"
+                  aria-selected="true"></button>
+                <button
+                  class="dot"
+                  aria-label="Slide 2"
+                  aria-controls="slide-2"
+                  aria-selected="false"></button>
+                <button
+                  class="dot"
+                  aria-label="Slide 3"
+                  aria-controls="slide-3"
+                  aria-selected="false"></button>
+              </div>
+            </div>
           </div>
           <div class="features-grid">
             <div class="feature-card">
@@ -1094,6 +1634,126 @@
         </div>
       </section>
 
+      <section id="weekly-resources" class="resources">
+        <div class="container">
+          <div class="section-header">
+            <p class="cartoon-title">Weekly resources</p>
+            <h2>Weekly Impact Brief + field-tested blog insights</h2>
+            <p>
+              Each week we publish a data-backed resource that pairs a CEIQ insight with an
+              actionable template. Share your details once and we will email the exclusive edition,
+              plus unlock a preview immediately for download.
+            </p>
+          </div>
+          <div class="resources-grid">
+            <div class="resource-highlight">
+              <h3>Request the CEIQ Weekly Impact Brief</h3>
+              <p>
+                Subscribe to receive a curated action inventory, implementation checklist, and
+                ready-to-send stakeholder story—delivered straight to your inbox every Monday.
+              </p>
+              <form class="resource-form">
+                <div class="form-row">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Full name"
+                    aria-label="Full name"
+                    required />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Work email"
+                    aria-label="Work email"
+                    required />
+                </div>
+                <div class="form-row">
+                  <select name="role" aria-label="Your role" required>
+                    <option value="">Your role</option>
+                    <option>Superintendent</option>
+                    <option>Principal</option>
+                    <option>Family & Community Engagement Lead</option>
+                    <option>Grant / Fund Development</option>
+                    <option>Other District Leader</option>
+                  </select>
+                  <input
+                    type="text"
+                    name="organization"
+                    placeholder="District / Organization"
+                    aria-label="District or organization" />
+                </div>
+                <label class="resource-checkbox">
+                  <input type="checkbox" name="preview" value="yes" checked />
+                  <span>
+                    Send me the resource via email and unlock the instant download preview.
+                  </span>
+                </label>
+                <button type="submit" class="btn btn-primary">Send me the Weekly Brief</button>
+              </form>
+              <div class="resource-preview">
+                <h4>Free Preview: Action Gap Radar</h4>
+                <p>
+                  Visualize which of the 18 critical engagement steps are completed, in progress, or
+                  missing—and highlight the exact actions driving attendance and retention wins.
+                </p>
+                <a href="#" class="btn btn-secondary">Download Free Preview</a>
+                <small>You will also receive the full brief in your inbox once submitted.</small>
+              </div>
+            </div>
+            <div class="blog-showcase">
+              <h3>Latest "Proof of Practice" articles</h3>
+              <!-- <p>
+                Every article pairs hard data with practical storytelling so you can brief cabinet
+                in under five minutes.
+              </p> -->
+              <div class="blog-cards">
+                <article class="blog-card">
+                  <p class="blog-tag">Academic Outcomes</p>
+                  <h4>
+                    <a href="/blog/action-vs-anecdotes">
+                      Stop relying on anecdotes. Get the data that drives achievement.
+                    </a>
+                  </h4>
+                  <p>
+                    Learn how one district correlated CEIQ inventories with attendance surges to win
+                    renewed funding.
+                  </p>
+                  <a class="btn-link" href="/blog/action-vs-anecdotes">Read article →</a>
+                </article>
+                <article class="blog-card">
+                  <p class="blog-tag">Predictive Strategy</p>
+                  <h4>
+                    <a href="/blog/predictive-strategy">
+                      Forecast engagement ROI before launching new programs.
+                    </a>
+                  </h4>
+                  <p>
+                    Use EmpowerAI signals to model which initiatives will lift graduation and
+                    climate metrics—and which to sunset.
+                  </p>
+                  <a class="btn-link" href="/blog/predictive-strategy">Read article →</a>
+                </article>
+                <article class="blog-card">
+                  <p class="blog-tag">Stakeholder Trust</p>
+                  <h4>
+                    <a href="/blog/trust-blueprint">
+                      Turn board skepticism into a measurable blueprint.
+                    </a>
+                  </h4>
+                  <p>
+                    Show precisely where every dollar activates fundamental steps across campuses.
+                  </p>
+                  <a class="btn-link" href="/blog/trust-blueprint">Read article →</a>
+                </article>
+              </div>
+              <!-- <p class="newsletter-note">
+                No spam—just one actionable resource and three fresh blog links every week.
+              </p> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="cta">
         <div class="container">
           <div class="cta-container">
@@ -1114,9 +1774,7 @@
             </div>
             <div class="cta-content">
               <h2>Ready to Transform Your School or District?</h2>
-              <p>
-                Learn how CEIQ bridges the gap from data collection to measurable action.
-              </p>
+              <p>Learn how CEIQ bridges the gap from data collection to measurable action.</p>
               <a href="#" class="btn">Schedule Your Demo</a>
             </div>
           </div>
