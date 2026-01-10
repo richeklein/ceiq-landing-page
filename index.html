@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap&font-display=swap"
       rel="stylesheet" />
     <style>
       /* --- CSS Reset & Base Styles --- */
@@ -23,6 +23,10 @@
         --color-text-light: #6b7280; /* gray-500 */
         --font-family-sans: 'Manrope', sans-serif;
         --container-padding: 1rem;
+        /* Standardized shadow system */
+        --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 20px 35px -15px rgba(15, 23, 42, 0.25);
       }
 
       *,
@@ -74,6 +78,12 @@
         color: inherit;
         transition: color 0.2s ease-in-out;
       }
+      a:focus-visible,
+      button:focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+        border-radius: 0.25rem;
+      }
 
       .container {
         width: 100%;
@@ -97,7 +107,7 @@
       .btn-primary {
         background-color: var(--color-primary);
         color: white;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        box-shadow: var(--shadow-md);
       }
       .btn-primary:hover {
         background-color: var(--color-primary-hover);
@@ -247,7 +257,7 @@
 
       /* --- Hero Section --- */
       .hero {
-        padding: 5rem 0;
+        padding: 6rem 0;
         position: relative;
         overflow: hidden;
         background: linear-gradient(135deg, #eef2ff 0%, #f5f3ff 45%, #eff6ff 100%);
@@ -279,6 +289,7 @@
         mix-blend-mode: multiply;
         filter: blur(3rem);
         animation: blob 8s infinite;
+        will-change: transform;
       }
       .blob1 {
         top: -5rem;
@@ -307,6 +318,9 @@
       }
       .hero-content h1 {
         color: #111827;
+        max-width: 520px;
+        margin-left: auto;
+        margin-right: auto;
       }
       .hero-content .highlight {
         color: var(--color-primary);
@@ -412,6 +426,7 @@
         height: auto;
         display: block;
         border-radius: inherit;
+        object-position: center top;
       }
 
       .hero-screenshot {
@@ -423,7 +438,7 @@
 
       /* --- Storyline Section --- */
       .storyline {
-        padding: 4rem 0;
+        padding: 6rem 0;
         background: #ffffff; /* switched from dark to white */
         color: var(--color-text-dark);
       }
@@ -568,7 +583,7 @@
 
       /* --- Weekly Resources --- */
       .resources {
-        padding: 5rem 0;
+        padding: 6rem 0;
         background: #fff;
       }
       .resources .section-header {
@@ -612,6 +627,15 @@
         font-size: 1rem;
         font-family: inherit;
         background: white;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+      .resource-form select {
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%234b5563' d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 1rem center;
+        padding-right: 2.5rem;
+        cursor: pointer;
       }
       .resource-form button {
         margin-top: 0.5rem;
@@ -812,7 +836,7 @@
         background: #f9fafb;
         border-radius: 1.25rem;
         padding: 2rem;
-        box-shadow: 0 20px 35px -15px rgba(15, 23, 42, 0.25);
+        box-shadow: var(--shadow-lg);
       }
       .collective-grid {
         display: grid;
@@ -865,7 +889,7 @@
 
       /* --- Features Section --- */
       .features {
-        padding: 5rem 0;
+        padding: 6rem 0;
       }
       .features-carousel-wrapper {
         margin-top: 3rem;
@@ -916,11 +940,12 @@
         background-color: white;
         padding: 2rem;
         border-radius: 1rem;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        transition: box-shadow 0.3s ease;
+        box-shadow: var(--shadow-sm);
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
       }
       .feature-card:hover {
-        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        box-shadow: var(--shadow-md);
+        transform: translateY(-2px);
       }
       .feature-icon {
         display: flex;
@@ -953,7 +978,7 @@
       /* --- CTA Section --- */
       .cta {
         background-color: white;
-        padding: 5rem 0;
+        padding: 6rem 0;
       }
       .cta-container {
         background-color: var(--color-primary);
@@ -969,7 +994,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        opacity: 0.1;
+        opacity: 0.15;
       }
       .cta-content {
         position: relative;
@@ -1028,6 +1053,8 @@
       }
       .footer-links-col a {
         color: var(--color-text-light);
+        display: inline-block;
+        padding: 0.25rem 0;
       }
       .footer-links-col a:hover {
         color: #111827;
@@ -1065,6 +1092,9 @@
       }
 
       @media (min-width: 768px) {
+        :root {
+          --container-padding: 1.5rem;
+        }
         .nav-links {
           display: flex;
           align-items: baseline;
@@ -1193,8 +1223,7 @@
       .video-modal-content {
         position: relative;
         width: 90%;
-        max-width: 520px;
-        margin: 0 auto;
+        max-width: 800px;
         margin: auto;
         animation: slideIn 0.3s;
       }
@@ -1252,7 +1281,6 @@
         border: none;
       }
     </style>
-    <link rel="stylesheet" href="/index.css" />
   </head>
   <body>
     <header class="header">
@@ -1303,7 +1331,6 @@
             <div class="hero-content">
               <h1>
                 The future-ready
-                <br />
                 <span class="highlight">community empowerment</span>
                 platform
               </h1>
@@ -1984,6 +2011,5 @@
         }
       })
     </script>
-    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
