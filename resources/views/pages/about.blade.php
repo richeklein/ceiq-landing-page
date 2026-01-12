@@ -4,7 +4,7 @@ Company information and values for CEIQ.
 --}}
 <x-layouts.app title="About Us | CEIQ - Community Engagement Intelligence for K-12">
     {{-- Hero Section --}}
-    <section class="hero">
+    {{-- <section class="hero">
         <div class="blob blob1"></div>
         <div class="blob blob2"></div>
         <div class="container">
@@ -19,7 +19,7 @@ Company information and values for CEIQ.
                 </p>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     {{-- Our Story Section --}}
     <section class="about-section">
@@ -113,7 +113,7 @@ Company information and values for CEIQ.
     </section>
 
     {{-- Our Approach Section --}}
-    <section class="about-section">
+    {{-- <section class="about-section">
         <div class="container">
             <div class="section-header">
                 <p class="subtitle">Our Approach</p>
@@ -181,13 +181,12 @@ Company information and values for CEIQ.
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     {{-- CTA Section --}}
     <x-cta-section
         title="Ready to See CEIQ in Action?"
         subtitle="Discover how action-level intelligence can transform community engagement at your school or district."
         button-text="Schedule Your Demo"
-        button-href="#"
     />
 </x-layouts.app>

@@ -2,9 +2,9 @@
 Call-to-action section with pattern overlay.
 Reusable across pages for consistent CTAs.
 --}}
-@props(['title' => 'Ready to Transform Your School or District?', 'subtitle' => 'Learn how CEIQ bridges the gap between engagement activities and measurable outcomes.', 'buttonText' => 'Schedule Your Demo', 'buttonHref' => '#'])
+@props(['title' => 'Ready to Transform Your School or District?', 'subtitle' => 'Learn how CEIQ bridges the gap between engagement activities and measurable outcomes.', 'buttonText' => 'Schedule Your Demo'])
 
-<section class="cta">
+<section class="cta" x-data>
     <div class="container">
         <div class="cta-container">
             <div class="cta-pattern">
@@ -26,7 +26,7 @@ Reusable across pages for consistent CTAs.
             <div class="cta-content">
                 <h2>{{ $title }}</h2>
                 <p>{{ $subtitle }}</p>
-                <a href="{{ $buttonHref }}" class="btn">{{ $buttonText }}</a>
+                <button type="button" class="btn" x-on:click="$dispatch('open-demo-modal')">{{ $buttonText }}</button>
             </div>
         </div>
     </div>

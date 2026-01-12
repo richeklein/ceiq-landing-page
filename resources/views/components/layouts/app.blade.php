@@ -68,9 +68,13 @@ Provides consistent structure, styling, and navigation across all pages.
             align-items: center;
             justify-content: center;
             padding: 0.75rem 1.25rem;
+            border: none;
             border-radius: 0.5rem;
             font-weight: 600;
+            font-family: inherit;
+            font-size: inherit;
             text-align: center;
+            cursor: pointer;
             transition: all 0.2s ease-in-out;
         }
         .btn-primary {

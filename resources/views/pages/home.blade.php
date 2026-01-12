@@ -21,7 +21,7 @@ Main marketing page for CEIQ.
                         justify funding, and scale what works.
                     </p>
                     <div class="hero-actions">
-                        <button type="button" class="btn btn-primary" @click="$dispatch('open-demo-modal')">Request a Demo</button>
+                        {{-- <button type="button" class="btn btn-primary" @click="$dispatch('open-demo-modal')">Request a Demo</button> --}}
                         <x-video-modal video-id="dQw4w9WgXcQ">Intro Video</x-video-modal>
                     </div>
                 </div>
@@ -277,6 +277,5 @@ Main marketing page for CEIQ.
         title="Ready to Transform Your School or District?"
         subtitle="Learn how CEIQ bridges the gap between engagement activities and measurable outcomes."
         button-text="Schedule Your Demo"
-        button-href="#"
     />
 </x-layouts.app>
