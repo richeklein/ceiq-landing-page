@@ -1,0 +1,282 @@
+{{--
+Home page / landing page.
+Main marketing page for CEIQ.
+--}}
+<x-layouts.app title="CEIQ | Community Engagement Intelligence for K-12">
+    {{-- Hero Section --}}
+    <section class="hero">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1>
+                        The future-ready
+                        <span class="highlight">community empowerment</span>
+                        platform
+                    </h1>
+                    <p>
+                        CEIQ bridges the gap between community engagement data and measurable student
+                        success. K-12 leaders finally have a data-driven blueprint to prove impact,
+                        justify funding, and scale what works.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#" class="btn btn-primary">Request a Demo</a>
+                        <x-video-modal video-id="dQw4w9WgXcQ">Intro Video</x-video-modal>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <img src="{{ asset('images/hero-2.jpg') }}" alt="CEIQ Dashboard Preview" class="hero-screenshot" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- Storyline Section --}}
+    <section class="storyline" id="storyline">
+        <div class="container">
+            <header>
+                <p class="cartoon-title">The CEIQ Difference</p>
+                <h2>Action-Level Intelligence</h2>
+                <p>
+                    Traditional surveys measure sentiment. CEIQ inventories the critical actions that build
+                    resilient school communities—giving you predictive data, not just reflections.
+                </p>
+            </header>
+
+            <div class="storyline-grid">
+                <div class="storyline-insights">
+                    <span class="insights-eyebrow">How CEIQ Resolves the Storyline</span>
+                    <h3>Inventory Critical Actions, Not Just Feelings</h3>
+                    <p>
+                        We capture what stakeholders actually do, not just how they feel. This shift from sentiment
+                        to behavior gives you predictive power and measurable ROI.
+                    </p>
+                    <ul class="insights-list">
+                        <li>
+                            <svg class="insights-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            <div>
+                                <strong>Quantify the Unquantifiable</strong>
+                                <p>Turn community engagement activities into measurable data points.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <svg class="insights-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            <div>
+                                <strong>Predictive Power</strong>
+                                <p>Correlate engagement behaviors to attendance, retention, and outcomes.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <svg class="insights-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            </svg>
+                            <div>
+                                <strong>Justify Your Strategy</strong>
+                                <p>Present evidence-based ROI to boards, funders, and stakeholders.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="storyline-carousel-wrapper">
+                    <x-carousel
+                        id="storyline-carousel"
+                        :images="[
+                            ['src' => 'images/dashboard-1.png', 'alt' => 'CEIQ Dashboard - Overview'],
+                            ['src' => 'images/dashboard-2.png', 'alt' => 'CEIQ Dashboard - Analytics'],
+                            ['src' => 'images/dashboard-3.png', 'alt' => 'CEIQ Dashboard - Reports'],
+                        ]"
+                        :interval="5000"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- Features Section --}}
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <p class="subtitle">The Complete Platform</p>
+                <h2>
+                    Stakeholder Intelligence. <span class="highlight">Elevated.</span><br />
+                    Community Empowerment. <span class="highlight">Achieved.</span>
+                </h2>
+                <p>
+                    Four pillars designed to transform how K-12 leaders understand, measure, and
+                    strengthen community engagement.
+                </p>
+            </div>
+
+            <div class="feature-grid">
+                <x-feature-card title="Customizable Survey Design" icon-color="#3b82f6">
+                    <x-slot:icon>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
+                        </svg>
+                    </x-slot:icon>
+                    Build action-level surveys aligned with state engagement standards. Our research-backed
+                    inventory captures what truly matters for student success.
+                </x-feature-card>
+
+                <x-feature-card title="Advanced Filtering & Analytics" icon-color="#6366f1">
+                    <x-slot:icon>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" />
+                        </svg>
+                    </x-slot:icon>
+                    Drill into engagement data by demographics, schools, or custom segments. Uncover
+                    hidden patterns and prioritize high-impact opportunities.
+                </x-feature-card>
+
+                <x-feature-card title="Scalable & Adaptable Solution" icon-color="#8b5cf6">
+                    <x-slot:icon>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
+                        </svg>
+                    </x-slot:icon>
+                    From single schools to entire districts, CEIQ grows with your needs. Add sites, users,
+                    and custom surveys without complexity.
+                </x-feature-card>
+
+                <x-feature-card title="EmpowerAI: Data to Decisive Action" icon-color="#0ea5e9">
+                    <x-slot:icon>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+                        </svg>
+                    </x-slot:icon>
+                    Our AI-powered engine transforms raw engagement data into actionable insights,
+                    stakeholder stories, and strategic recommendations.
+                </x-feature-card>
+            </div>
+        </div>
+    </section>
+
+    {{-- Resources Section --}}
+    <section class="resources" id="weekly-resources">
+        <div class="container">
+            <div class="section-header">
+                <p class="subtitle">Resources</p>
+                <h2>CEIQ Impact Brief</h2>
+            </div>
+
+            <div class="resources-grid">
+                <div class="resource-highlight">
+                    <h3>Request the CEIQ Impact Brief</h3>
+                    <p>
+                        Get our comprehensive guide to measuring community engagement ROI,
+                        including templates and checklists.
+                    </p>
+
+                    @if(session('success'))
+                        <div class="flash-message success">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+
+                    @if($errors->any())
+                        <div class="flash-message error">
+                            Please correct the errors below.
+                        </div>
+                    @endif
+
+                    <form class="resource-form" action="{{ route('resource-request.store') }}" method="POST">
+                        @csrf
+                        <div class="form-row">
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Full Name"
+                                value="{{ old('name') }}"
+                                required
+                                class="{{ $errors->has('name') ? 'input-error' : '' }}"
+                            />
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Email Address"
+                                value="{{ old('email') }}"
+                                required
+                                class="{{ $errors->has('email') ? 'input-error' : '' }}"
+                            />
+                        </div>
+                        @error('name')
+                            <p class="error-message">{{ $message }}</p>
+                        @enderror
+                        @error('email')
+                            <p class="error-message">{{ $message }}</p>
+                        @enderror
+                        <div class="form-row">
+                            <select name="role" required class="{{ $errors->has('role') ? 'input-error' : '' }}">
+                                <option value="" disabled {{ old('role') ? '' : 'selected' }}>Select Your Role</option>
+                                <option value="Superintendent" {{ old('role') == 'Superintendent' ? 'selected' : '' }}>Superintendent</option>
+                                <option value="Principal" {{ old('role') == 'Principal' ? 'selected' : '' }}>Principal</option>
+                                <option value="Family & Community Engagement Lead" {{ old('role') == 'Family & Community Engagement Lead' ? 'selected' : '' }}>Family & Community Engagement Lead</option>
+                                <option value="Grant / Fund Development" {{ old('role') == 'Grant / Fund Development' ? 'selected' : '' }}>Grant / Fund Development</option>
+                                <option value="Other District Leader" {{ old('role') == 'Other District Leader' ? 'selected' : '' }}>Other District Leader</option>
+                            </select>
+                            <input
+                                type="text"
+                                name="organization"
+                                placeholder="Organization (Optional)"
+                                value="{{ old('organization') }}"
+                            />
+                        </div>
+                        @error('role')
+                            <p class="error-message">{{ $message }}</p>
+                        @enderror
+                        <label class="resource-checkbox">
+                            <input type="checkbox" name="preview" value="1" {{ old('preview', true) ? 'checked' : '' }} />
+                            <span>Send me the resource via email and add me to the CEIQ Proof of Practice newsletter (you can unsubscribe anytime).</span>
+                        </label>
+                        <button type="submit" class="btn btn-primary">Send me the Impact Brief</button>
+                    </form>
+
+                    <div class="resource-preview">
+                        <h4>Free Preview: Action Gap Radar</h4>
+                        <p>See a sample of our engagement analytics in action.</p>
+                        <a href="#" class="btn btn-secondary">Download Free Preview</a>
+                        <small>You will also receive our Proof of Practice newsletter.</small>
+                    </div>
+                </div>
+
+                <div class="blog-showcase">
+                    <h3>Latest "Proof of Practice" articles</h3>
+                    <div class="blog-cards">
+                        <div class="blog-card">
+                            <span class="blog-tag">Research</span>
+                            <h4><a href="#">Why Satisfaction Surveys Miss the Mark</a></h4>
+                            <p>How action-level data reveals what sentiment can't.</p>
+                            <a href="#" class="btn-link">Read article &rarr;</a>
+                        </div>
+                        <div class="blog-card">
+                            <span class="blog-tag">Case Study</span>
+                            <h4><a href="#">Lincoln USD: From Surveys to Strategy</a></h4>
+                            <p>How one district used CEIQ to justify a $2M engagement initiative.</p>
+                            <a href="#" class="btn-link">Read article &rarr;</a>
+                        </div>
+                        <div class="blog-card">
+                            <span class="blog-tag">Guide</span>
+                            <h4><a href="#">The ROI of Community Engagement</a></h4>
+                            <p>A framework for measuring what matters most.</p>
+                            <a href="#" class="btn-link">Read article &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- CTA Section --}}
+    <x-cta-section
+        title="Ready to Transform Your School or District?"
+        subtitle="Learn how CEIQ bridges the gap between engagement activities and measurable outcomes."
+        button-text="Schedule Your Demo"
+        button-href="#"
+    />
+</x-layouts.app>
