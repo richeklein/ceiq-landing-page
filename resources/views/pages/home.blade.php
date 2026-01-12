@@ -21,7 +21,7 @@ Main marketing page for CEIQ.
                         justify funding, and scale what works.
                     </p>
                     <div class="hero-actions">
-                        <a href="#" class="btn btn-primary">Request a Demo</a>
+                        <button type="button" class="btn btn-primary" @click="$dispatch('open-demo-modal')">Request a Demo</button>
                         <x-video-modal video-id="dQw4w9WgXcQ">Intro Video</x-video-modal>
                     </div>
                 </div>

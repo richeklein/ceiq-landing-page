@@ -15,7 +15,7 @@ Includes sticky positioning and backdrop blur.
         </nav>
         <div class="header-actions">
             <a href="#" class="btn btn-tertiary btn-compact">Log in</a>
-            <a href="#" class="btn btn-primary btn-compact">Request a Demo</a>
+            <button type="button" class="btn btn-primary btn-compact" @click="$dispatch('open-demo-modal')">Request a Demo</button>
         </div>
         <button
             class="mobile-menu-button"
@@ -41,7 +41,7 @@ Includes sticky positioning and backdrop blur.
         </nav>
         <div class="header-actions-mobile">
             <a href="#" class="btn btn-tertiary btn-compact">Log in</a>
-            <a href="#" class="btn btn-secondary btn-compact">Request a Demo</a>
+            <button type="button" class="btn btn-secondary btn-compact" @click="$dispatch('open-demo-modal'); mobileMenuOpen = false">Request a Demo</button>
         </div>
     </div>
 </header>

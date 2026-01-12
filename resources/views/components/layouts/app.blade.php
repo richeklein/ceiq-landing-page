@@ -264,6 +264,186 @@ Provides consistent structure, styling, and navigation across all pages.
         }
         .video-modal-close:hover { opacity: 0.7; }
 
+        /* --- Demo Request Modal --- */
+        .demo-modal-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(4px);
+            padding: 1rem;
+        }
+        .demo-modal {
+            position: relative;
+            width: 100%;
+            max-width: 480px;
+            max-height: 90vh;
+            overflow-y: auto;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            padding: 2rem;
+        }
+        .demo-modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: var(--color-text-light);
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .demo-modal-close:hover {
+            background-color: var(--color-muted);
+            color: var(--color-text-dark);
+        }
+        .demo-modal-header {
+            margin-bottom: 1.5rem;
+            padding-right: 2rem;
+        }
+        .demo-modal-header h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .demo-modal-header p {
+            font-size: 0.9375rem;
+            color: var(--color-text-medium);
+        }
+        .demo-modal-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+        .demo-modal-field {
+            display: flex;
+            flex-direction: column;
+            gap: 0.375rem;
+        }
+        .demo-modal-field label {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--color-text-dark);
+        }
+        .demo-modal-field .required {
+            color: #dc2626;
+        }
+        .demo-modal-field input,
+        .demo-modal-field textarea {
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--color-muted);
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-family: inherit;
+            color: var(--color-text-dark);
+            transition: all 0.2s ease;
+            background-color: white;
+        }
+        .demo-modal-field input:focus,
+        .demo-modal-field textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        .demo-modal-field input.has-error,
+        .demo-modal-field textarea.has-error {
+            border-color: #dc2626;
+        }
+        .demo-modal-field input::placeholder,
+        .demo-modal-field textarea::placeholder {
+            color: #9ca3af;
+        }
+        .demo-modal-field textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        .demo-modal-field .field-error {
+            font-size: 0.8125rem;
+            color: #dc2626;
+        }
+        .demo-modal-error {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1rem;
+            background-color: #fef2f2;
+            border: 1px solid #fecaca;
+            border-radius: 0.5rem;
+            color: #dc2626;
+            font-size: 0.875rem;
+        }
+        .demo-modal-submit {
+            width: 100%;
+            padding: 0.875rem 1.5rem;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+        .demo-modal-submit:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .demo-modal-spinner {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .demo-modal-spinner svg {
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .demo-modal-privacy {
+            font-size: 0.8125rem;
+            color: var(--color-text-light);
+            text-align: center;
+        }
+        .demo-modal-privacy a {
+            color: var(--color-primary);
+            text-decoration: underline;
+        }
+        .demo-modal-success {
+            text-align: center;
+            padding: 2rem 0;
+        }
+        .demo-modal-success-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background-color: #ecfdf5;
+            border-radius: 50%;
+            color: #059669;
+        }
+        .demo-modal-success h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .demo-modal-success p {
+            font-size: 1rem;
+            color: var(--color-text-medium);
+            margin-bottom: 1.5rem;
+            max-width: 320px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .demo-modal-success .btn {
+            min-width: 120px;
+        }
+        [x-cloak] { display: none !important; }
+
         /* --- Storyline Section --- */
         .storyline { padding: 6rem 0; background: #ffffff; color: var(--color-text-dark); }
         .storyline header { text-align: center; margin-bottom: 2.5rem; }
@@ -646,6 +826,9 @@ Provides consistent structure, styling, and navigation across all pages.
     </main>
 
     <x-footer />
+
+    {{-- Demo Request Modal (global) --}}
+    <x-demo-request-modal />
 
     {{ $scripts ?? '' }}
 </body>
