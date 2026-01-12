@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy | CEIQ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap&font-display=swap"
+      rel="stylesheet" />
+    <style>
+      :root {
+        --color-primary: #2563eb;
+        --color-primary-hover: #1d4ed8;
+        --color-accent: #f97316;
+        --color-light-bg: #f8f9fc;
+        --color-text-dark: #1f2937;
+        --color-text-medium: #4b5563;
+        --color-text-light: #6b7280;
+        --font-family-sans: 'Manrope', sans-serif;
+        --container-padding: 1rem;
+        --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      }
+
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        font-family: var(--font-family-sans);
+        background-color: var(--color-light-bg);
+        color: var(--color-text-dark);
+        line-height: 1.6;
+      }
+
+      h1, h2, h3 {
+        font-weight: 800;
+        color: #111827;
+        letter-spacing: -0.025em;
+      }
+
+      h1 { font-size: 2.25rem; line-height: 1.08; }
+      h2 { font-size: 1.5rem; line-height: 1.2; margin-top: 2.5rem; margin-bottom: 1rem; }
+      h3 { font-size: 1.125rem; line-height: 1.3; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+
+      p { color: var(--color-text-medium); margin-bottom: 1rem; }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        transition: color 0.2s ease-in-out;
+      }
+      a:focus-visible, button:focus-visible {
+        outline: 2px solid var(--color-primary);
+        outline-offset: 2px;
+        border-radius: 0.25rem;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 var(--container-padding);
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 1.25rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        text-align: center;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .btn-primary {
+        background-color: var(--color-primary);
+        color: white;
+      }
+      .btn-primary:hover {
+        background-color: var(--color-primary-hover);
+        transform: translateY(-2px);
+      }
+
+      .btn-tertiary { color: var(--color-text-medium); }
+      .btn-tertiary:hover { color: var(--color-primary); }
+
+      .btn-secondary {
+        border: 1px solid var(--color-primary);
+        color: var(--color-primary);
+      }
+      .btn-secondary:hover {
+        background-color: #eff6ff;
+        transform: translateY(-2px);
+      }
+
+      /* Header */
+      .header {
+        background-color: rgba(248, 249, 252, 0.8);
+        backdrop-filter: blur(10px);
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+      .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 4rem;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .logo img {
+        height: 28px;
+        width: auto;
+        object-fit: contain;
+      }
+      .nav-links { display: none; }
+      .nav-links a {
+        color: var(--color-text-medium);
+        font-weight: 600;
+        padding: 0.25rem 0.5rem;
+      }
+      .nav-links a:hover { color: var(--color-primary); }
+      .header-actions { display: none; }
+      .btn-compact {
+        padding: 0.5rem 0.9rem;
+        border-radius: 0.5rem;
+        font-size: 0.95rem;
+      }
+      .mobile-menu-button {
+        display: flex;
+        background: none;
+        border: none;
+        padding: 0.5rem;
+        cursor: pointer;
+      }
+      .mobile-menu-button img {
+        width: 24px;
+        height: 24px;
+      }
+
+      #mobile-menu {
+        max-height: 0;
+        overflow: hidden;
+        border-top: 1px solid transparent;
+        transition: max-height 0.3s ease-in-out, border-color 0.3s ease-in-out;
+      }
+      #mobile-menu.is-open {
+        max-height: 500px;
+        border-top-color: #e5e7eb;
+      }
+      #mobile-menu .nav-links-mobile {
+        padding: 0.5rem 0.75rem 1rem;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease-in-out 0.1s, transform 0.3s ease-in-out 0.1s;
+      }
+      #mobile-menu.is-open .nav-links-mobile {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      #mobile-menu .nav-links-mobile a {
+        display: block;
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.375rem;
+        font-weight: 500;
+        color: var(--color-text-medium);
+      }
+      #mobile-menu .nav-links-mobile a:hover {
+        color: var(--color-primary);
+        background-color: #f3f4f6;
+      }
+      #mobile-menu .header-actions-mobile {
+        border-top: 1px solid #e5e7eb;
+        padding: 1rem 1.25rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.3s ease-in-out 0.15s, transform 0.3s ease-in-out 0.15s;
+      }
+      #mobile-menu.is-open .header-actions-mobile {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Legal Page Layout */
+      .legal-hero {
+        padding: 4rem 0 2rem;
+        background: #ffffff;
+        border-bottom: 1px solid #e5e7eb;
+      }
+      .legal-hero h1 {
+        margin-bottom: 0.5rem;
+      }
+      .legal-meta {
+        color: var(--color-text-light);
+        font-size: 0.95rem;
+      }
+
+      .legal-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 3rem 0 5rem;
+        background: #ffffff;
+      }
+
+      .legal-nav {
+        display: none;
+        padding-left: 1.5rem;
+      }
+      .legal-nav-inner {
+        position: sticky;
+        top: 5rem;
+      }
+      .legal-nav h4 {
+        font-size: 0.875rem;
+        font-weight: 700;
+        color: var(--color-text-dark);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 1rem;
+      }
+      .legal-nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .legal-nav a {
+        display: block;
+        padding: 0.5rem 0;
+        font-size: 0.95rem;
+        color: var(--color-text-medium);
+        border-left: 2px solid transparent;
+        padding-left: 1rem;
+        transition: all 0.2s ease;
+      }
+      .legal-nav a:hover {
+        color: var(--color-primary);
+        border-left-color: var(--color-primary);
+      }
+
+      .legal-body {
+        max-width: 48rem;
+      }
+      .legal-body p {
+        line-height: 1.8;
+      }
+      .legal-body ul, .legal-body ol {
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+        color: var(--color-text-medium);
+      }
+      .legal-body li {
+        margin-bottom: 0.5rem;
+        line-height: 1.7;
+      }
+      .legal-body a {
+        color: var(--color-primary);
+        text-decoration: underline;
+      }
+      .legal-body a:hover {
+        color: var(--color-primary-hover);
+      }
+
+      .legal-section {
+        padding-top: 1rem;
+        border-top: 1px solid #f3f4f6;
+      }
+      .legal-section:first-child {
+        border-top: none;
+        padding-top: 0;
+      }
+
+      .highlight-box {
+        background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+        border: 1px solid #86efac;
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+      }
+      .highlight-box h3 {
+        color: #166534;
+        margin-top: 0;
+        margin-bottom: 0.75rem;
+        font-size: 1.1rem;
+      }
+      .highlight-box p {
+        color: #166534;
+        margin-bottom: 0;
+      }
+      .highlight-box ul {
+        color: #166534;
+        margin-bottom: 0;
+      }
+
+      /* Footer */
+      .footer {
+        background-color: #f9fafb;
+        padding: 4rem 0 2rem;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .footer-about .logo { margin-bottom: 2rem; }
+      .footer-about p { color: var(--color-text-light); }
+      .footer-links-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+      .footer-links-col h3 {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: #111827;
+        text-transform: uppercase;
+      }
+      .footer-links-col ul {
+        list-style: none;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .footer-links-col a {
+        color: var(--color-text-light);
+        display: inline-block;
+        padding: 0.25rem 0;
+      }
+      .footer-links-col a:hover { color: #111827; }
+      .footer-bottom {
+        margin-top: 3rem;
+        border-top: 1px solid #e5e7eb;
+        padding-top: 2rem;
+        text-align: center;
+      }
+      .footer-bottom p { color: #9ca3af; }
+
+      /* Media Queries */
+      @media (min-width: 640px) {
+        h1 { font-size: 2.75rem; }
+      }
+
+      @media (min-width: 768px) {
+        :root { --container-padding: 1.5rem; }
+        .nav-links {
+          display: flex;
+          align-items: baseline;
+          gap: 0.5rem;
+        }
+        .header-actions {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+        .mobile-menu-button { display: none; }
+        .footer-links-grid { grid-template-columns: repeat(3, 1fr); }
+        .footer-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 2rem;
+        }
+        .footer-about { grid-column: span 1; }
+        .footer-links-container { grid-column: span 2; }
+        .legal-content {
+          grid-template-columns: 220px 1fr;
+          gap: 3rem;
+        }
+        .legal-nav { display: block; }
+      }
+
+      @media (min-width: 1024px) {
+        :root { --container-padding: 2rem; }
+        h1 { font-size: 3rem; }
+        .legal-content {
+          grid-template-columns: 250px 1fr;
+          gap: 4rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header-container">
+        <a href="/" class="logo">
+          <img src="images/logo.png" alt="CEIQ Logo" />
+        </a>
+        <nav class="nav-links">
+          <a href="/#storyline">Story</a>
+          <a href="/#features">Platform</a>
+          <a href="/#weekly-resources">Resources</a>
+          <a href="/blog">Blog</a>
+        </nav>
+        <div class="header-actions">
+          <a href="#" class="btn btn-tertiary btn-compact">Log in</a>
+          <a href="#" class="btn btn-primary btn-compact">Request a Demo</a>
+        </div>
+        <button id="mobile-menu-button" class="mobile-menu-button" aria-label="Toggle menu" aria-expanded="false">
+          <img src="images/menu.svg" alt="Menu" />
+        </button>
+      </div>
+      <div id="mobile-menu">
+        <nav class="nav-links-mobile">
+          <a href="/#storyline">Story</a>
+          <a href="/#features">Platform</a>
+          <a href="/#weekly-resources">Resources</a>
+          <a href="/blog">Blog</a>
+        </nav>
+        <div class="header-actions-mobile">
+          <a href="#" class="btn btn-tertiary btn-compact">Log in</a>
+          <a href="#" class="btn btn-secondary btn-compact">Request a Demo</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="legal-hero">
+        <div class="container">
+          <h1>Privacy Policy</h1>
+          <p class="legal-meta">Last updated: January 11, 2025</p>
+        </div>
+      </section>
+
+      <section class="legal-content">
+        <div class="container" style="display: contents;">
+          <aside class="legal-nav">
+            <div class="legal-nav-inner">
+              <h4>Contents</h4>
+              <ul>
+                <li><a href="#commitment">Our Commitment</a></li>
+                <li><a href="#no-pii">Anonymous by Design</a></li>
+                <li><a href="#what-we-collect">What We Collect</a></li>
+                <li><a href="#what-we-dont">What We Don't Collect</a></li>
+                <li><a href="#how-we-use">How We Use Data</a></li>
+                <li><a href="#data-sharing">Data Sharing</a></li>
+                <li><a href="#cookies">Cookies & Analytics</a></li>
+                <li><a href="#data-security">Data Security</a></li>
+                <li><a href="#retention">Data Retention</a></li>
+                <li><a href="#childrens-privacy">Children's Privacy</a></li>
+                <li><a href="#your-rights">Your Rights</a></li>
+                <li><a href="#changes">Policy Changes</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+              </ul>
+            </div>
+          </aside>
+
+          <div class="legal-body">
+            <div class="legal-section" id="commitment">
+              <h2>1. Our Commitment to Privacy</h2>
+              <p>
+                At CEIQ, we believe that meaningful community engagement data can be collected without
+                compromising individual privacy. Our platform was designed from the ground up with
+                privacy as a core principle, not an afterthought.
+              </p>
+              <p>
+                This Privacy Policy explains how we handle information when you use our community
+                engagement intelligence platform. We want to be clear and transparent about our
+                practices so you can make informed decisions.
+              </p>
+            </div>
+
+            <div class="legal-section" id="no-pii">
+              <h2>2. Anonymous by Design</h2>
+
+              <div class="highlight-box">
+                <h3>Key Privacy Commitment</h3>
+                <p>
+                  <strong>The CEIQ platform does not collect any personally identifiable information (PII)
+                  from survey respondents.</strong> All surveys conducted through our platform are completely
+                  anonymous at the individual level. We cannot and do not track, identify, or link survey
+                  responses to specific individuals.
+                </p>
+              </div>
+
+              <p>
+                Our approach to data collection is fundamentally different from traditional survey platforms.
+                We measure community engagement through action-level inventories that capture <em>what</em>
+                happens in school communities, not <em>who</em> is doing it. This design choice ensures that:
+              </p>
+              <ul>
+                <li>Individual survey respondents cannot be identified</li>
+                <li>Responses cannot be traced back to specific students, parents, or staff members</li>
+                <li>No personal information is stored that could be used to re-identify individuals</li>
+                <li>Aggregated data provides valuable insights without privacy risks</li>
+              </ul>
+            </div>
+
+            <div class="legal-section" id="what-we-collect">
+              <h2>3. What We Collect</h2>
+
+              <h3>Survey Responses (Anonymous)</h3>
+              <p>
+                When individuals complete surveys through CEIQ, we collect their responses in a completely
+                anonymous format. This includes:
+              </p>
+              <ul>
+                <li>Responses to survey questions about community engagement activities</li>
+                <li>Optional demographic categories (e.g., role type such as "parent" or "teacher") that cannot identify individuals</li>
+                <li>Timestamp of survey completion (date only, not precise time)</li>
+              </ul>
+
+              <h3>Administrative Account Information</h3>
+              <p>
+                For school and district administrators who manage CEIQ accounts, we collect:
+              </p>
+              <ul>
+                <li>Name and email address for account creation and login</li>
+                <li>School or district affiliation</li>
+                <li>Role/title within the organization</li>
+                <li>Account activity logs for security purposes</li>
+              </ul>
+
+              <h3>Website Visitors</h3>
+              <p>
+                When you visit our marketing website (not the survey platform), we may collect:
+              </p>
+              <ul>
+                <li>Information you voluntarily provide through contact forms</li>
+                <li>Basic analytics data (see Cookies & Analytics section)</li>
+              </ul>
+            </div>
+
+            <div class="legal-section" id="what-we-dont">
+              <h2>4. What We Don't Collect</h2>
+
+              <div class="highlight-box">
+                <h3>We Never Collect</h3>
+                <ul>
+                  <li>Names, email addresses, or contact information from survey respondents</li>
+                  <li>Student ID numbers or other educational record identifiers</li>
+                  <li>IP addresses of survey respondents</li>
+                  <li>Device fingerprints or tracking identifiers for survey respondents</li>
+                  <li>Location data beyond school/district level</li>
+                  <li>Social Security numbers or government IDs</li>
+                  <li>Financial or health information</li>
+                  <li>Any information that could reasonably identify an individual respondent</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="legal-section" id="how-we-use">
+              <h2>5. How We Use Data</h2>
+
+              <h3>Anonymous Survey Data</h3>
+              <p>We use aggregated, anonymous survey data to:</p>
+              <ul>
+                <li>Generate engagement reports and analytics for subscribing schools and districts</li>
+                <li>Provide benchmarking comparisons across demographic groups</li>
+                <li>Power our EmpowerAI insights and recommendations</li>
+                <li>Improve our platform and develop new features</li>
+                <li>Conduct research on community engagement trends (using only aggregated data)</li>
+              </ul>
+
+              <h3>Administrative Account Data</h3>
+              <p>We use administrator information to:</p>
+              <ul>
+                <li>Provide access to the CEIQ platform</li>
+                <li>Send service-related communications</li>
+                <li>Provide customer support</li>
+                <li>Send product updates and newsletters (with opt-out option)</li>
+              </ul>
+            </div>
+
+            <div class="legal-section" id="data-sharing">
+              <h2>6. Data Sharing</h2>
+              <p>
+                We do not sell, rent, or trade any data to third parties. We may share data only in
+                the following limited circumstances:
+              </p>
+              <ul>
+                <li>
+                  <strong>With your organization:</strong> Aggregated survey results are shared with
+                  the subscribing school or district that deployed the survey.
+                </li>
+                <li>
+                  <strong>Service providers:</strong> We work with trusted vendors who help us operate
+                  our platform (hosting, analytics). These providers are contractually bound to protect
+                  your data and use it only for providing services to us.
+                </li>
+                <li>
+                  <strong>Legal requirements:</strong> We may disclose information if required by law,
+                  court order, or government regulation.
+                </li>
+                <li>
+                  <strong>Business transfers:</strong> If CEIQ is involved in a merger or acquisition,
+                  data may be transferred as part of that transaction, with continued privacy protections.
+                </li>
+              </ul>
+            </div>
+
+            <div class="legal-section" id="cookies">
+              <h2>7. Cookies & Analytics</h2>
+
+              <h3>Marketing Website</h3>
+              <p>
+                Our marketing website uses cookies and similar technologies for:
+              </p>
+              <ul>
+                <li><strong>Essential cookies:</strong> Required for website functionality</li>
+                <li><strong>Analytics cookies:</strong> Help us understand how visitors use our site</li>
+                <li><strong>Preference cookies:</strong> Remember your settings and choices</li>
+              </ul>
+              <p>
+                You can control cookies through your browser settings. Disabling cookies may affect
+                website functionality.
+              </p>
+
+              <h3>Survey Platform</h3>
+              <p>
+                The CEIQ survey platform uses only essential cookies required for the survey to function.
+                We do not use tracking cookies, advertising cookies, or analytics cookies that could
+                identify individual survey respondents.
+              </p>
+            </div>
+
+            <div class="legal-section" id="data-security">
+              <h2>8. Data Security</h2>
+              <p>
+                We implement industry-standard security measures to protect data, including:
+              </p>
+              <ul>
+                <li>Encryption of data in transit (TLS/SSL) and at rest</li>
+                <li>Regular security assessments and penetration testing</li>
+                <li>Access controls and authentication requirements</li>
+                <li>Employee training on data protection practices</li>
+                <li>Incident response procedures</li>
+              </ul>
+              <p>
+                While we strive to protect your data, no method of transmission over the Internet is
+                100% secure. We cannot guarantee absolute security but are committed to maintaining
+                appropriate safeguards.
+              </p>
+            </div>
+
+            <div class="legal-section" id="retention">
+              <h2>9. Data Retention</h2>
+              <p>
+                We retain data only as long as necessary to fulfill the purposes described in this policy:
+              </p>
+              <ul>
+                <li>
+                  <strong>Survey data:</strong> Retained for the duration of the customer's subscription,
+                  plus 30 days after termination to allow for data export.
+                </li>
+                <li>
+                  <strong>Account data:</strong> Retained while the account is active and for a reasonable
+                  period afterward for legal and business purposes.
+                </li>
+                <li>
+                  <strong>Aggregated analytics:</strong> May be retained indefinitely as it cannot identify individuals.
+                </li>
+              </ul>
+            </div>
+
+            <div class="legal-section" id="childrens-privacy">
+              <h2>10. Children's Privacy</h2>
+              <p>
+                CEIQ is designed for use by educational institutions and adult administrators. Our
+                surveys may be completed by students, but we do not knowingly collect personal
+                information from children under 13 (or the applicable age in your jurisdiction).
+              </p>
+              <p>
+                Because our surveys are anonymous and do not collect PII, student responses cannot
+                be linked to individual children. Schools deploying surveys to students are responsible
+                for ensuring compliance with COPPA, FERPA, and other applicable regulations.
+              </p>
+            </div>
+
+            <div class="legal-section" id="your-rights">
+              <h2>11. Your Rights</h2>
+              <p>
+                Depending on your location, you may have certain rights regarding your data:
+              </p>
+              <ul>
+                <li><strong>Access:</strong> Request a copy of the data we hold about you</li>
+                <li><strong>Correction:</strong> Request correction of inaccurate data</li>
+                <li><strong>Deletion:</strong> Request deletion of your data</li>
+                <li><strong>Portability:</strong> Request your data in a portable format</li>
+                <li><strong>Opt-out:</strong> Unsubscribe from marketing communications</li>
+              </ul>
+              <p>
+                Note: Because survey responses are anonymous, we cannot fulfill individual rights
+                requests for survey data as we have no way to identify which responses belong to
+                any particular individual.
+              </p>
+              <p>
+                To exercise your rights regarding administrative account data, please contact us
+                using the information below.
+              </p>
+            </div>
+
+            <div class="legal-section" id="changes">
+              <h2>12. Changes to This Policy</h2>
+              <p>
+                We may update this Privacy Policy from time to time. We will notify you of any material
+                changes by posting the new policy on this page and updating the "Last updated" date.
+              </p>
+              <p>
+                For significant changes, we will provide additional notice such as an email notification
+                to administrative account holders. We encourage you to review this policy periodically.
+              </p>
+            </div>
+
+            <div class="legal-section" id="contact">
+              <h2>13. Contact Us</h2>
+              <p>
+                If you have questions about this Privacy Policy or our data practices, please contact us:
+              </p>
+              <p>
+                <strong>CEIQ, Inc.</strong><br />
+                Email: <a href="mailto:privacy@ceiqinc.com">privacy@ceiqinc.com</a><br />
+                Website: <a href="https://ceiqinc.com">ceiqinc.com</a>
+              </p>
+              <p>
+                For data protection inquiries or to exercise your rights, please email
+                <a href="mailto:privacy@ceiqinc.com">privacy@ceiqinc.com</a> with "Privacy Request" in the subject line.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-about">
+            <a href="/" class="logo">
+              <img src="images/logo.png" alt="CEIQ Logo" />
+            </a>
+            <p>The data-driven platform for comprehensive community empowerment.</p>
+          </div>
+          <div class="footer-links-container">
+            <div class="footer-links-grid">
+              <div class="footer-links-col">
+                <h3>Company</h3>
+                <ul>
+                  <li><a href="/about.html">About Us</a></li>
+                </ul>
+              </div>
+              <div class="footer-links-col">
+                <h3>Resources</h3>
+                <ul>
+                  <li><a href="/blog">Blog</a></li>
+                </ul>
+              </div>
+              <div class="footer-links-col">
+                <h3>Legal</h3>
+                <ul>
+                  <li><a href="/terms.html">Terms</a></li>
+                  <li><a href="/privacy.html">Privacy</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 CEIQ, Inc. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const mobileMenuButton = document.getElementById('mobile-menu-button')
+        const mobileMenu = document.getElementById('mobile-menu')
+
+        if (mobileMenuButton && mobileMenu) {
+          function toggleMenu() {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true'
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded)
+            mobileMenu.classList.toggle('is-open')
+          }
+
+          function closeMenu() {
+            mobileMenuButton.setAttribute('aria-expanded', 'false')
+            mobileMenu.classList.remove('is-open')
+          }
+
+          mobileMenuButton.addEventListener('click', toggleMenu)
+
+          document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('is-open')) {
+              closeMenu()
+            }
+          })
+
+          const mobileNavLinks = mobileMenu.querySelectorAll('.nav-links-mobile a')
+          mobileNavLinks.forEach(function (link) {
+            link.addEventListener('click', closeMenu)
+          })
+        }
+      })
+    </script>
+  </body>
+</html>
