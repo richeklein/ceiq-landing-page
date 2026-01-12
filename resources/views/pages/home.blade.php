@@ -214,11 +214,12 @@ Main marketing page for CEIQ.
                         <div class="form-row">
                             <select name="role" required class="{{ $errors->has('role') ? 'input-error' : '' }}">
                                 <option value="" disabled {{ old('role') ? '' : 'selected' }}>Select Your Role</option>
-                                <option value="Superintendent" {{ old('role') == 'Superintendent' ? 'selected' : '' }}>Superintendent</option>
+                                <option value="Parent" {{ old('role') == 'Parent' ? 'selected' : '' }}>Parent</option>
+                                <option value="Teacher" {{ old('role') == 'Teacher' ? 'selected' : '' }}>Teacher</option>
                                 <option value="Principal" {{ old('role') == 'Principal' ? 'selected' : '' }}>Principal</option>
-                                <option value="Family & Community Engagement Lead" {{ old('role') == 'Family & Community Engagement Lead' ? 'selected' : '' }}>Family & Community Engagement Lead</option>
-                                <option value="Grant / Fund Development" {{ old('role') == 'Grant / Fund Development' ? 'selected' : '' }}>Grant / Fund Development</option>
-                                <option value="Other District Leader" {{ old('role') == 'Other District Leader' ? 'selected' : '' }}>Other District Leader</option>
+                                <option value="Family or Community Engagement Lead" {{ old('role') == 'Family or Community Engagement Lead' ? 'selected' : '' }}>Family & Community Engagement Lead</option>
+                                <option value="District Leader" {{ old('role') == 'District Leader' ? 'selected' : '' }}>District Leader</option>
+                                <option value="Other" {{ old('role') == 'Other' ? 'selected' : '' }}>Other</option>
                             </select>
                             <input
                                 type="text"

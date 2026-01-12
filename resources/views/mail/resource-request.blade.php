@@ -17,8 +17,10 @@ Sent when users submit the Impact Brief request form.
         </h1>
 
         <p style="color: #4b5563; font-size: 1rem; margin-bottom: 1rem;">
-            Thank you for your interest in the CEIQ Impact Brief! As a {{ $resourceRequest->role }},
-            you understand the importance of data-driven community engagement.
+            Thank you for your interest in the CEIQ Impact Brief!
+            @if ($resourceRequest->role !== 'Other')
+                As a {{ $resourceRequest->role }}, you understand the importance of data-driven community engagement.
+            @endif
         </p>
 
         <p style="color: #4b5563; font-size: 1rem; margin-bottom: 0.5rem;">
