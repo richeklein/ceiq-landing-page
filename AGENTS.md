@@ -12,6 +12,7 @@ This file is for coding agents working in this repo. Follow it literally.
 - **Do not overwrite user edits.** The user may change code between messages. If something changed, understand *why* and build on it.
 - **Keep changes simple.** Implement the smallest change that solves the problem (unless you’re writing tests).
 - **Fix root causes.** When debugging, gather enough info to understand the failure and fix it at the source (not via band-aids).
+- **Use my existing composer version** Do not update or change the composer version, symlinks, or dependencies without approval. Use the existing composer setup. If you need to add a dependency, ask me first and use the correct version constraint.
 
 ## Architecture & structure (Laravel 12)
 
@@ -190,7 +191,7 @@ This application is a Laravel application and its main Laravel ecosystems packag
 
 ### Constructors
 - Use PHP 8 constructor property promotion in `__construct()`.
-    - <code-snippet>public function __construct(public GitHub $github) { }</code-snippet>
+  - <code-snippet>public function __construct(public GitHub $github) { }</code-snippet>
 - Do not allow empty `__construct()` methods with zero parameters unless the constructor is private.
 
 ### Type Declarations
