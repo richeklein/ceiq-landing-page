@@ -17,7 +17,7 @@ class ResourceRequestController extends Controller
         $validated = $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'email', 'max:255'],
-            'role' => ['required', 'string', 'in:Superintendent,Principal,Family & Community Engagement Lead,Grant / Fund Development,Other District Leader'],
+            'role' => ['required', 'string', 'in:Parent,Teacher,Principal,Family & Community Engagement Lead,District Leader,Other'],
             'organization' => ['nullable', 'string', 'max:255'],
             'preview' => ['nullable'],
         ]);

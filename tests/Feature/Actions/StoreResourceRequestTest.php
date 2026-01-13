@@ -18,7 +18,7 @@ test('action creates resource request record', function () {
     $result = $action->execute([
         'name' => 'Test User',
         'email' => 'action-test@example.com',
-        'role' => 'Superintendent',
+        'role' => 'Teacher',
         'organization' => 'Test District',
         'preview' => true,
     ]);
@@ -26,7 +26,7 @@ test('action creates resource request record', function () {
     expect($result)->toBeInstanceOf(ResourceRequest::class);
     expect($result->name)->toBe('Test User');
     expect($result->email)->toBe('action-test@example.com');
-    expect($result->role)->toBe('Superintendent');
+    expect($result->role)->toBe('Teacher');
     expect($result->organization)->toBe('Test District');
     expect($result->wants_preview)->toBeTrue();
 });

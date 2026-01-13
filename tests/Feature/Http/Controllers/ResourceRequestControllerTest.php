@@ -45,11 +45,12 @@ test('resource request form requires valid role', function () {
 
 test('resource request form accepts valid role options', function () {
     $validRoles = [
-        'Superintendent',
+        'Parent',
+        'Teacher',
         'Principal',
         'Family & Community Engagement Lead',
-        'Grant / Fund Development',
-        'Other District Leader',
+        'District Leader',
+        'Other',
     ];
 
     foreach ($validRoles as $role) {
@@ -65,7 +66,7 @@ test('resource request creates database record', function () {
     post(route('resource-request.store'), [
         'name' => 'Jane Smith',
         'email' => 'jane@example.com',
-        'role' => 'Superintendent',
+        'role' => 'Teacher',
         'organization' => 'Test School District',
         'preview' => 'on',
     ])->assertRedirect();
@@ -74,7 +75,7 @@ test('resource request creates database record', function () {
 
     $request = ResourceRequest::where('email', 'jane@example.com')->first();
     expect($request->name)->toBe('Jane Smith');
-    expect($request->role)->toBe('Superintendent');
+    expect($request->role)->toBe('Teacher');
     expect($request->organization)->toBe('Test School District');
     expect($request->wants_preview)->toBeTrue();
 });
