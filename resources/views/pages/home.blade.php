@@ -22,7 +22,7 @@ Main marketing page for CEIQ.
                     </p>
                     <div class="hero-actions">
                         {{-- <button type="button" class="btn btn-primary" @click="$dispatch('open-demo-modal')">Request a Demo</button> --}}
-                        <x-video-modal video-id="dQw4w9WgXcQ">Intro Video</x-video-modal>
+                        {{-- <x-video-modal video-id="dQw4w9WgXcQ">Intro Video</x-video-modal> --}}
                     </div>
                 </div>
                 <div class="hero-visual">
@@ -158,7 +158,7 @@ Main marketing page for CEIQ.
     </section>
 
     {{-- Resources Section --}}
-    <section class="resources" id="weekly-resources">
+    {{-- <section class="resources" id="weekly-resources">
         <div class="container">
             <div class="section-header">
                 <p class="subtitle">Resources</p>
@@ -271,7 +271,7 @@ Main marketing page for CEIQ.
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     {{-- CTA Section --}}
     <x-cta-section
