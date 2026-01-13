@@ -14,15 +14,17 @@ Consistent across all pages.
             <div class="footer-links-container">
                 <div class="footer-links-grid">
                     <div class="footer-links-col">
-                        <h3>Company</h3>
+                        <h3>Platform</h3>
                         <ul>
-                            <li><a href="{{ route('about') }}">About Us</a></li>
+                            <li><a href="{{ route('home') }}#platform">Features</a></li>
+                            <li><a href="{{ route('home') }}#solutions">Solutions</a></li>
+                            <li><a href="{{ route('home') }}#values">Values</a></li>
                         </ul>
                     </div>
                     <div class="footer-links-col">
-                        <h3>Resources</h3>
+                        <h3>Connect</h3>
                         <ul>
-                            <li><a href="/blog">Blog</a></li>
+                            <li><a href="{{ route('home') }}#contact">Contact Us</a></li>
                         </ul>
                     </div>
                     <div class="footer-links-col">

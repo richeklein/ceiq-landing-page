@@ -21,8 +21,7 @@ Main marketing page for CEIQ.
                         justify funding, and scale what works.
                     </p>
                     <div class="hero-actions">
-                        {{-- <button type="button" class="btn btn-primary" @click="$dispatch('open-demo-modal')">Request a Demo</button> --}}
-                        {{-- <x-video-modal video-id="dQw4w9WgXcQ">Intro Video</x-video-modal> --}}
+                        <button type="button" class="btn btn-primary" @click="$dispatch('open-demo-modal')">Request a Demo</button>
                     </div>
                 </div>
                 <div class="hero-visual">
@@ -32,8 +31,8 @@ Main marketing page for CEIQ.
         </div>
     </section>
 
-    {{-- Storyline Section --}}
-    <section class="storyline" id="storyline">
+    {{-- Solutions Section --}}
+    <section class="storyline" id="solutions">
         <div class="container">
             <header>
                 <p class="cartoon-title">The CEIQ Difference</p>
@@ -44,62 +43,48 @@ Main marketing page for CEIQ.
                 </p>
             </header>
 
-            <div class="storyline-grid">
-                <div class="storyline-insights">
-                    <span class="insights-eyebrow">How CEIQ Resolves the Storyline</span>
-                    <h3>Inventory Critical Actions, Not Just Feelings</h3>
-                    <p>
-                        We capture what stakeholders actually do, not just how they feel. This shift from sentiment
-                        to behavior gives you predictive power and measurable ROI.
-                    </p>
-                    <ul class="insights-list">
-                        <li>
-                            <svg class="insights-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <div class="solutions-content">
+                <div class="solutions-grid">
+                    <div class="solution-item">
+                        <div class="solution-icon">
+                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
                             </svg>
-                            <div>
-                                <strong>Quantify the Unquantifiable</strong>
-                                <p>Turn community engagement activities into measurable data points.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <svg class="insights-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        </div>
+                        <div>
+                            <strong>Quantify the Unquantifiable</strong>
+                            <p>Turn community engagement activities into measurable data points.</p>
+                        </div>
+                    </div>
+                    <div class="solution-item">
+                        <div class="solution-icon">
+                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
                             </svg>
-                            <div>
-                                <strong>Predictive Power</strong>
-                                <p>Correlate engagement behaviors to attendance, retention, and outcomes.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <svg class="insights-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        </div>
+                        <div>
+                            <strong>Predictive Power</strong>
+                            <p>Correlate engagement behaviors to attendance, retention, and outcomes.</p>
+                        </div>
+                    </div>
+                    <div class="solution-item">
+                        <div class="solution-icon">
+                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                 <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
                             </svg>
-                            <div>
-                                <strong>Justify Your Strategy</strong>
-                                <p>Present evidence-based ROI to boards, funders, and stakeholders.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="storyline-carousel-wrapper">
-                    <x-carousel
-                        id="storyline-carousel"
-                        :images="[
-                            ['src' => 'images/dashboard-1.png', 'alt' => 'CEIQ Dashboard - Overview'],
-                            ['src' => 'images/dashboard-2.png', 'alt' => 'CEIQ Dashboard - Analytics'],
-                            ['src' => 'images/dashboard-3.png', 'alt' => 'CEIQ Dashboard - Reports'],
-                        ]"
-                        :interval="5000"
-                    />
+                        </div>
+                        <div>
+                            <strong>Justify Your Strategy</strong>
+                            <p>Present evidence-based ROI to boards, funders, and stakeholders.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    {{-- Features Section --}}
-    <section class="features" id="features">
+    {{-- Platform Section --}}
+    <section class="features" id="platform">
         <div class="container">
             <div class="section-header">
                 <p class="subtitle">The Complete Platform</p>
@@ -153,6 +138,25 @@ Main marketing page for CEIQ.
                     Our AI-powered engine transforms raw engagement data into actionable insights,
                     stakeholder stories, and strategic recommendations.
                 </x-feature-card>
+            </div>
+
+            {{-- Platform Demo Carousel --}}
+            <div class="platform-demo">
+                <div class="platform-demo-header">
+                    <h3>See CEIQ in Action</h3>
+                    <p>Explore the dashboard that transforms engagement data into actionable insights.</p>
+                </div>
+                <div class="platform-carousel-wrapper">
+                    <x-carousel
+                        id="platform-carousel"
+                        :images="[
+                            ['src' => 'images/dashboard-1.png', 'alt' => 'CEIQ Dashboard - Overview'],
+                            ['src' => 'images/dashboard-2.png', 'alt' => 'CEIQ Dashboard - Analytics'],
+                            ['src' => 'images/dashboard-3.png', 'alt' => 'CEIQ Dashboard - Reports'],
+                        ]"
+                        :interval="5000"
+                    />
+                </div>
             </div>
         </div>
     </section>
@@ -273,8 +277,71 @@ Main marketing page for CEIQ.
         </div>
     </section> --}}
 
+    {{-- Values Section --}}
+    <section class="about-section alt-bg" id="values">
+        <div class="container">
+            <div class="section-header">
+                <p class="subtitle">Our Values</p>
+                <h2>What Drives Us</h2>
+                <p>
+                    These principles guide everything we build and every partnership we form.
+                </p>
+            </div>
+            <div class="values-grid">
+                <x-value-card title="Data-Driven Decisions" icon-class="value-icon-1">
+                    <x-slot:icon>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 3v18h18"/>
+                            <path d="m19 9-5 5-4-4-3 3"/>
+                        </svg>
+                    </x-slot:icon>
+                    We believe intuition should be validated by evidence. Our platform transforms abstract
+                    engagement into trackable metrics that inform strategic choices.
+                </x-value-card>
+
+                <x-value-card title="Community Empowerment" icon-class="value-icon-2">
+                    <x-slot:icon>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </x-slot:icon>
+                    Strong schools are built on strong communities. We equip all stakeholders—educators,
+                    families, and partners—with tools to drive meaningful change.
+                </x-value-card>
+
+                <x-value-card title="Measurable Impact" icon-class="value-icon-3">
+                    <x-slot:icon>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 20V10"/>
+                            <path d="M18 20V4"/>
+                            <path d="M6 20v-4"/>
+                        </svg>
+                    </x-slot:icon>
+                    Every engagement activity should connect to student outcomes. We help you correlate
+                    community actions with attendance, retention, and academic achievement.
+                </x-value-card>
+
+                <x-value-card title="Collective Intelligence" icon-class="value-icon-4">
+                    <x-slot:icon>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                            <path d="M2 12h20"/>
+                        </svg>
+                    </x-slot:icon>
+                    The best solutions emerge when diverse expertise comes together. CEIQ unites educators,
+                    technologists, and community experts to surface insights no single perspective could find.
+                </x-value-card>
+            </div>
+        </div>
+    </section>
+
     {{-- CTA Section --}}
     <x-cta-section
+        id="contact"
         title="Ready to Transform Your School or District?"
         subtitle="Learn how CEIQ bridges the gap between engagement activities and measurable outcomes."
         button-text="Schedule Your Demo"

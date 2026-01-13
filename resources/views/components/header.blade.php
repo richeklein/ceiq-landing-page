@@ -8,11 +8,10 @@ Includes sticky positioning and backdrop blur.
             <img src="{{ asset('images/logo.png') }}" alt="CEIQ Logo" />
         </a>
         <nav class="nav-links">
-            {{-- <a href="{{ route('home') }}#storyline">Story</a> --}}
-            {{-- <a href="{{ route('home') }}#features">Platform</a> --}}
-            <a href="{{ route('about') }}#weekly-resources">About Us</a>
-            <a href="{{ route('home') }}#weekly-resources">Resources</a>
-            <a href="#">Blog</a>
+            <a href="{{ route('home') }}#platform">Platform</a>
+            <a href="{{ route('home') }}#solutions">Solutions</a>
+            <a href="{{ route('home') }}#values">Values</a>
+            <a href="{{ route('home') }}#contact">Contact</a>
         </nav>
         <div class="header-actions">
             {{-- <a href="#" class="btn btn-tertiary btn-compact">Log in</a> --}}
@@ -34,11 +33,10 @@ Includes sticky positioning and backdrop blur.
          :class="{ 'is-open': mobileMenuOpen }"
          @keydown.escape.window="mobileMenuOpen = false">
         <nav class="nav-links-mobile">
-            {{-- <a href="{{ route('home') }}#storyline" @click="mobileMenuOpen = false">Story</a> --}}
-            {{-- <a href="{{ route('home') }}#features" @click="mobileMenuOpen = false">Platform</a> --}}
-            <a href="{{ route('about') }}#weekly-resources">About Us</a>
-            <a href="{{ route('home') }}#weekly-resources" @click="mobileMenuOpen = false">Resources</a>
-            <a href="/blog" @click="mobileMenuOpen = false">Blog</a>
+            <a href="{{ route('home') }}#platform" @click="mobileMenuOpen = false">Platform</a>
+            <a href="{{ route('home') }}#solutions" @click="mobileMenuOpen = false">Solutions</a>
+            <a href="{{ route('home') }}#values" @click="mobileMenuOpen = false">Values</a>
+            <a href="{{ route('home') }}#contact" @click="mobileMenuOpen = false">Contact</a>
         </nav>
         <div class="header-actions-mobile">
             {{-- <a href="#" class="btn btn-tertiary btn-compact">Log in</a> --}}

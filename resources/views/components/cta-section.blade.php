@@ -2,9 +2,9 @@
 Call-to-action section with pattern overlay.
 Reusable across pages for consistent CTAs.
 --}}
-@props(['title' => 'Ready to Transform Your School or District?', 'subtitle' => 'Learn how CEIQ bridges the gap between engagement activities and measurable outcomes.', 'buttonText' => 'Schedule Your Demo'])
+@props(['title' => 'Ready to Transform Your School or District?', 'subtitle' => 'Learn how CEIQ bridges the gap between engagement activities and measurable outcomes.', 'buttonText' => 'Schedule Your Demo', 'id' => null])
 
-<section class="cta" x-data>
+<section class="cta" x-data @if($id) id="{{ $id }}" @endif>
     <div class="container">
         <div class="cta-container">
             <div class="cta-pattern">

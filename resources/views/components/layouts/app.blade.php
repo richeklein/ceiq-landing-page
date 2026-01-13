@@ -11,6 +11,18 @@ Provides consistent structure, styling, and navigation across all pages.
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ $title }}</title>
+
+    {{-- Favicons --}}
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/favicons/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('images/favicons/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicons/favicon-16x16.png') }}">
+    <link rel="manifest" href="{{ asset('images/favicons/site.webmanifest') }}">
+    <link rel="mask-icon" href="{{ asset('images/favicons/safari-pinned-tab.svg') }}" color="#2563eb">
+    <link rel="shortcut icon" href="{{ asset('images/favicons/favicon.ico') }}">
+    <meta name="msapplication-TileColor" content="#2563eb">
+    <meta name="msapplication-config" content="{{ asset('images/favicons/browserconfig.xml') }}">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap&font-display=swap" rel="stylesheet" />
@@ -537,6 +549,93 @@ Provides consistent structure, styling, and navigation across all pages.
         .feature-icon svg { width: 28px; height: 28px; color: white; }
         .feature-card h3 { margin-bottom: 0.5rem; }
 
+        /* --- Platform Demo --- */
+        .platform-demo {
+            margin-top: 4rem;
+            text-align: center;
+        }
+        .platform-demo-header {
+            margin-bottom: 2rem;
+        }
+        .platform-demo-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .platform-demo-header p {
+            color: var(--color-text-medium);
+            max-width: 32rem;
+            margin: 0 auto;
+        }
+        .platform-carousel-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 1rem;
+            overflow: visible;
+            background: #ffffff;
+        }
+        .platform-carousel-wrapper .carousel-track {
+            border-radius: 1rem;
+            box-shadow: var(--shadow-lg);
+            background: #ffffff;
+        }
+        .platform-carousel-wrapper .carousel-slide img {
+            border-radius: 1rem;
+        }
+        .platform-carousel-wrapper .carousel-dots {
+            padding-top: 1.5rem;
+            padding-bottom: 0;
+        }
+
+        /* --- Solutions Section --- */
+        .solutions-content {
+            max-width: 52rem;
+            margin: 0 auto;
+        }
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        .solution-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        .solution-item:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+        .solution-icon {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 0.5rem;
+            background: linear-gradient(135deg, var(--color-primary), #8b5cf6);
+        }
+        .solution-icon svg {
+            width: 1.25rem;
+            height: 1.25rem;
+            color: white;
+        }
+        .solution-item strong {
+            display: block;
+            color: var(--color-text-dark);
+            font-size: 1.125rem;
+            margin-bottom: 0.25rem;
+        }
+        .solution-item p {
+            margin: 0;
+            color: var(--color-text-medium);
+        }
+
         /* --- Resources Section --- */
         .resources { padding: 6rem 0; background: #fff; }
         .resources .section-header { text-align: center; max-width: 52rem; margin: 0 auto 3rem; }
@@ -788,6 +887,7 @@ Provides consistent structure, styling, and navigation across all pages.
             .feature-grid { grid-template-columns: repeat(2, 1fr); }
             .values-grid { grid-template-columns: repeat(2, 1fr); }
             .resource-form .form-row { grid-template-columns: 1fr 1fr; }
+            .solutions-grid { grid-template-columns: repeat(3, 1fr); }
         }
 
         @media (min-width: 768px) {
