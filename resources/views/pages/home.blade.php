@@ -4,7 +4,7 @@ Main marketing page for CEIQ.
 --}}
 <x-layouts.app title="CEIQ | Community Engagement Intelligence for K-12">
     {{-- Hero Section --}}
-    <section class="hero">
+    <section class="hero" x-data>
         <div class="blob blob1"></div>
         <div class="blob blob2"></div>
         <div class="container">
