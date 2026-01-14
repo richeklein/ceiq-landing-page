@@ -25,7 +25,7 @@ Main marketing page for CEIQ.
                     </div>
                 </div>
                 <div class="hero-visual">
-                    <img src="{{ asset('images/hero-2.jpg') }}" alt="CEIQ Dashboard Preview" class="hero-screenshot" />
+                    <img src="{{ asset('images/hero-3.webp') }}" alt="CEIQ Dashboard Preview" class="hero-screenshot" />
                 </div>
             </div>
         </div>
@@ -88,7 +88,7 @@ Main marketing page for CEIQ.
                             </ul>
                         </div>
                         <div class="feature-slide-image">
-                            <img src="{{ asset('images/slides/1.png') }}" alt="CEIQ Engagement Metrics Chart" />
+                            <img src="{{ asset('images/slides/1.webp') }}" alt="CEIQ Engagement Metrics Chart" />
                         </div>
                     </div>
 
@@ -130,7 +130,7 @@ Main marketing page for CEIQ.
                             </ul>
                         </div>
                         <div class="feature-slide-image">
-                            <img src="{{ asset('images/slides/2.png') }}" alt="CEIQ Dashboard Overview" />
+                            <img src="{{ asset('images/slides/2.webp') }}" alt="CEIQ Dashboard Overview" />
                         </div>
                     </div>
 
@@ -172,7 +172,7 @@ Main marketing page for CEIQ.
                             </ul>
                         </div>
                         <div class="feature-slide-image">
-                            <img src="{{ asset('images/slides/3.png') }}" alt="CEIQ Matrix View" />
+                            <img src="{{ asset('images/slides/3.webp') }}" alt="CEIQ Matrix View" />
                         </div>
                     </div>
 
@@ -214,7 +214,7 @@ Main marketing page for CEIQ.
                             </ul>
                         </div>
                         <div class="feature-slide-image">
-                            <img src="{{ asset('images/slides/4.png') }}" alt="CEIQ Student Results Dashboard" />
+                            <img src="{{ asset('images/slides/4.webp') }}" alt="CEIQ Student Results Dashboard" />
                         </div>
                     </div>
 
@@ -256,7 +256,7 @@ Main marketing page for CEIQ.
                             </ul>
                         </div>
                         <div class="feature-slide-image">
-                            <img src="{{ asset('images/slides/5.png') }}" alt="CEIQ EmpowerAI Insights" />
+                            <img src="{{ asset('images/slides/5.webp') }}" alt="CEIQ EmpowerAI Insights" />
                         </div>
                     </div>
                 </div>
