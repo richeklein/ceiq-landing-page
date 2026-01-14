@@ -50,7 +50,7 @@ Main marketing page for CEIQ.
                  @mouseleave="interval = setInterval(() => activeSlide = (activeSlide + 1) % totalSlides, 6000)">
                 <div class="feature-slider">
                     {{-- Slide 1: Action-Level Data --}}
-                    <div class="feature-slide" x-show="activeSlide === 0" x-transition:enter="slide-enter" x-transition:leave="slide-leave">
+                    <div class="feature-slide" :class="{ 'is-active': activeSlide === 0 }">
                         <div class="feature-slide-content">
                             <p>
                                 We capture what stakeholders actually do, not just how they feel. This shift from sentiment
@@ -92,7 +92,7 @@ Main marketing page for CEIQ.
                     </div>
 
                     {{-- Slide 2: Dashboard Overview --}}
-                    <div class="feature-slide" x-show="activeSlide === 1" x-transition:enter="slide-enter" x-transition:leave="slide-leave">
+                    <div class="feature-slide" :class="{ 'is-active': activeSlide === 1 }">
                         <div class="feature-slide-content">
                             <p>
                                 Your central hub for tracking survey progress, monitoring response rates, and viewing real-time engagement insights across your entire organization.
@@ -133,7 +133,7 @@ Main marketing page for CEIQ.
                     </div>
 
                     {{-- Slide 3: CEIQ Matrix --}}
-                    <div class="feature-slide" x-show="activeSlide === 2" x-transition:enter="slide-enter" x-transition:leave="slide-leave">
+                    <div class="feature-slide" :class="{ 'is-active': activeSlide === 2 }">
                         <div class="feature-slide-content">
                             <p>
                                 Visualize engagement data across all stakeholder groups with our comprehensive matrix view. Identify patterns and prioritize areas for improvement.
@@ -174,7 +174,7 @@ Main marketing page for CEIQ.
                     </div>
 
                     {{-- Slide 4: Student Results --}}
-                    <div class="feature-slide" x-show="activeSlide === 3" x-transition:enter="slide-enter" x-transition:leave="slide-leave">
+                    <div class="feature-slide" :class="{ 'is-active': activeSlide === 3 }">
                         <div class="feature-slide-content">
                             <p>
                                 Deep dive into stakeholder-specific results with detailed breakdowns, trend analysis, and actionable metrics that drive improvement.

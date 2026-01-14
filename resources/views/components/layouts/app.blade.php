@@ -528,8 +528,14 @@ Provides consistent structure, styling, and navigation across all pages.
         .feature-slider {
             position: relative;
             min-height: 400px;
+            overflow: hidden;
         }
         .feature-slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transform: scale(0.985);
+            transition: opacity 400ms ease, transform 400ms ease;
             background: white;
             border-radius: 1.25rem;
             padding: 2rem;
@@ -538,6 +544,11 @@ Provides consistent structure, styling, and navigation across all pages.
             display: grid;
             grid-template-columns: 1fr;
             gap: 2rem;
+        }
+        .feature-slide.is-active {
+            position: relative;
+            opacity: 1;
+            transform: scale(1);
         }
         .feature-slide-content {
             display: flex;
