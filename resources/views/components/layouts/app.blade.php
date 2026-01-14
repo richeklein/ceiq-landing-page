@@ -465,7 +465,14 @@ Provides consistent structure, styling, and navigation across all pages.
         .storyline header { text-align: center; margin-bottom: 2.5rem; }
         .storyline header h2 { color: var(--color-text-dark); }
         .storyline header p { color: var(--color-text-medium); margin-top: 1rem; max-width: 48rem; margin-left: auto; margin-right: auto; }
-        .storyline .cartoon-title { color: var(--color-text-light); }
+        .storyline header .subtitle {
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.5rem;
+        }
         .storyline-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
         .storyline-carousel-wrapper { border-radius: 1rem; overflow: visible; background: #ffffff; }
         .storyline-carousel-wrapper .carousel { background: #ffffff; }
@@ -878,14 +885,12 @@ Provides consistent structure, styling, and navigation across all pages.
 
         /* --- Footer Section --- */
         .footer { background-color: #f9fafb; padding: 4rem 0 2rem; }
-        .footer-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; }
-        .footer-about .logo { margin-bottom: 2rem; }
+        .footer-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: end; }
+        .footer-about .logo { margin-bottom: 1rem; }
         .footer-about p { color: var(--color-text-light); }
-        .footer-links-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-        .footer-links-col h3 { font-size: 0.875rem; font-weight: 600; color: #111827; text-transform: uppercase; }
-        .footer-links-col ul { list-style: none; margin-top: 1rem; display: flex; flex-direction: column; gap: 1rem; }
-        .footer-links-col a { color: var(--color-text-light); display: inline-block; padding: 0.25rem 0; }
-        .footer-links-col a:hover { color: #111827; }
+        .footer-links-row { display: flex; gap: 2rem; flex-wrap: wrap; }
+        .footer-links-row a { color: var(--color-text-light); padding: 0.25rem 0; }
+        .footer-links-row a:hover { color: #111827; }
         .footer-bottom { margin-top: 3rem; border-top: 1px solid #e5e7eb; padding-top: 2rem; text-align: center; }
         .footer-bottom p { color: #9ca3af; }
 
@@ -1044,10 +1049,7 @@ Provides consistent structure, styling, and navigation across all pages.
             }
             .feature-slider { min-height: 350px; }
             .resources-grid { grid-template-columns: 1fr 1fr; }
-            .footer-links-grid { grid-template-columns: repeat(3, 1fr); }
-            .footer-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-            .footer-about { grid-column: span 1; }
-            .footer-links-container { grid-column: span 2; }
+            .footer-grid { grid-template-columns: 1fr auto; gap: 3rem; }
             .approach-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
             .legal-content { grid-template-columns: 220px 1fr; gap: 3rem; }
             .legal-nav { display: block; }

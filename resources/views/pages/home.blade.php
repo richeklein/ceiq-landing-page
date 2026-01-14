@@ -31,11 +31,11 @@ Main marketing page for CEIQ.
         </div>
     </section>
 
-    {{-- Solutions Section --}}
-    <section class="storyline" id="solutions">
+    {{-- Platform Section --}}
+    <section class="storyline" id="platform">
         <div class="container">
             <header>
-                <p class="cartoon-title">The Complete Platform</p>
+                <p class="subtitle">The Complete Platform</p>
                 <h2>Action-Level Intelligence</h2>
                 <p>
                     Traditional surveys measure sentiment. CEIQ inventories the critical actions that build
@@ -271,8 +271,8 @@ Main marketing page for CEIQ.
         </div>
     </section>
 
-    {{-- Platform Section --}}
-    <section class="features" id="platform">
+    {{-- Difference Section --}}
+    <section class="features" id="difference">
         <div class="container">
             <div class="section-header">
                 <p class="subtitle">The CEIQ Difference</p>

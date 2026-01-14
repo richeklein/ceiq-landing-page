@@ -8,10 +8,9 @@ Includes sticky positioning and backdrop blur.
             <img src="{{ asset('images/logo.png') }}" alt="CEIQ Logo" />
         </a>
         <nav class="nav-links">
-            <a href="{{ route('home') }}#platform">Platform</a>
-            <a href="{{ route('home') }}#solutions">Solutions</a>
-            <a href="{{ route('home') }}#values">Values</a>
-            <a href="{{ route('home') }}#contact">Contact</a>
+            <a href="#platform" @click.prevent="document.getElementById('platform').scrollIntoView({ behavior: 'smooth' })">Platform</a>
+            <a href="#difference" @click.prevent="document.getElementById('solutions').scrollIntoView({ behavior: 'smooth' })">CEIQ Difference</a>
+            <a href="#values" @click.prevent="document.getElementById('values').scrollIntoView({ behavior: 'smooth' })">Values</a>
         </nav>
         <div class="header-actions">
             {{-- <a href="#" class="btn btn-tertiary btn-compact">Log in</a> --}}
@@ -33,10 +32,9 @@ Includes sticky positioning and backdrop blur.
          :class="{ 'is-open': mobileMenuOpen }"
          @keydown.escape.window="mobileMenuOpen = false">
         <nav class="nav-links-mobile">
-            <a href="{{ route('home') }}#platform" @click="mobileMenuOpen = false">Platform</a>
-            <a href="{{ route('home') }}#solutions" @click="mobileMenuOpen = false">Solutions</a>
-            <a href="{{ route('home') }}#values" @click="mobileMenuOpen = false">Values</a>
-            <a href="{{ route('home') }}#contact" @click="mobileMenuOpen = false">Contact</a>
+            <a href="#platform" @click.prevent="mobileMenuOpen = false; document.getElementById('platform').scrollIntoView({ behavior: 'smooth' })">Platform</a>
+            <a href="#solutions" @click.prevent="mobileMenuOpen = false; document.getElementById('solutions').scrollIntoView({ behavior: 'smooth' })">CEIQ Difference</a>
+            <a href="#values" @click.prevent="mobileMenuOpen = false; document.getElementById('values').scrollIntoView({ behavior: 'smooth' })">Values</a>
         </nav>
         <div class="header-actions-mobile">
             {{-- <a href="#" class="btn btn-tertiary btn-compact">Log in</a> --}}
