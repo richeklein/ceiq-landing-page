@@ -35,7 +35,7 @@ Main marketing page for CEIQ.
     <section class="storyline" id="solutions">
         <div class="container">
             <header>
-                <p class="cartoon-title">The CEIQ Difference</p>
+                <p class="cartoon-title">The Complete Platform</p>
                 <h2>Action-Level Intelligence</h2>
                 <p>
                     Traditional surveys measure sentiment. CEIQ inventories the critical actions that build
@@ -97,7 +97,7 @@ Main marketing page for CEIQ.
     <section class="features" id="platform">
         <div class="container">
             <div class="section-header">
-                <p class="subtitle">The Complete Platform</p>
+                <p class="subtitle">The CEIQ Difference</p>
                 <h2>
                     Stakeholder Intelligence. <span class="highlight">Elevated.</span><br />
                     Community Empowerment. <span class="highlight">Achieved.</span>
