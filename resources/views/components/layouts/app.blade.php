@@ -216,19 +216,6 @@ Provides consistent structure, styling, and navigation across all pages.
             box-shadow: 0 28px 60px -38px rgba(15, 23, 42, 0.55);
             isolation: isolate;
         }
-        .hero-visual::before {
-            content: '';
-            position: absolute;
-            top: -8%;
-            left: -14%;
-            width: 20%;
-            height: 116%;
-            background: linear-gradient(210deg, rgba(37, 99, 235, 0.95), rgba(124, 58, 237, 0.8));
-            transform: skewX(-12deg);
-            opacity: 0.85;
-            z-index: 2;
-            pointer-events: none;
-        }
         .hero-visual::after {
             content: '';
             position: absolute;
