@@ -546,7 +546,7 @@ Provides consistent structure, styling, and navigation across all pages.
             background: white;
             border-radius: 1.25rem;
             padding: 2rem;
-            box-shadow: 0 20px 35px -15px rgba(15, 23, 42, 0.18);
+            box-shadow: var(--shadow-sm);
             border: 1px solid rgba(226, 232, 240, 0.6);
             display: grid;
             grid-template-columns: 1fr;
