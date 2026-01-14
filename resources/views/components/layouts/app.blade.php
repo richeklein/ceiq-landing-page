@@ -563,9 +563,9 @@ Provides consistent structure, styling, and navigation across all pages.
             gap: 1rem;
         }
         .slide-header {
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 600;
-            color: var(--color-text-dark);
+            color: var(--color-text-medium);
             margin: 0;
         }
         .feature-slide-content > p {
@@ -1051,7 +1051,7 @@ Provides consistent structure, styling, and navigation across all pages.
             .insights-chart { margin-bottom: 0; }
             .feature-slide {
                 grid-template-columns: 1fr 2fr;
-                align-items: center;
+                align-items: start;
             }
             .feature-slider { min-height: 350px; }
             .resources-grid { grid-template-columns: 1fr 1fr; }
