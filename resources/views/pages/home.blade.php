@@ -44,7 +44,7 @@ Main marketing page for CEIQ.
             </header>
 
             {{-- Feature Slider --}}
-            <div class="feature-slider-wrapper" x-data="{ activeSlide: 0, totalSlides: 4, interval: null }"
+            <div class="feature-slider-wrapper" x-data="{ activeSlide: 0, totalSlides: 5, interval: null }"
                  x-init="interval = setInterval(() => activeSlide = (activeSlide + 1) % totalSlides, 6000)"
                  @mouseenter="clearInterval(interval)"
                  @mouseleave="interval = setInterval(() => activeSlide = (activeSlide + 1) % totalSlides, 6000)">
@@ -211,6 +211,47 @@ Main marketing page for CEIQ.
                         </div>
                         <div class="feature-slide-image">
                             <img src="{{ asset('images/slides/4.png') }}" alt="CEIQ Student Results Dashboard" />
+                        </div>
+                    </div>
+
+                    {{-- Slide 5: EmpowerAI --}}
+                    <div class="feature-slide" :class="{ 'is-active': activeSlide === 4 }">
+                        <div class="feature-slide-content">
+                            <p>
+                                EmpowerAI analyzes data across your entire CEIQ platform, cross-referencing institutional goals and state requirements to deliver actionable insights tailored to your district.
+                            </p>
+                            <ul class="feature-checklist">
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    <div>
+                                        <strong>AI-Powered Analysis</strong>
+                                        <p>Surface patterns and insights that would take weeks to uncover manually.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    <div>
+                                        <strong>Best Practice Alignment</strong>
+                                        <p>Recommendations grounded in state requirements and proven strategies.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    <div>
+                                        <strong>Actionable Recommendations</strong>
+                                        <p>Get specific next steps, not just data—know exactly what to prioritize.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-slide-image">
+                            <img src="{{ asset('images/slides/5.png') }}" alt="CEIQ EmpowerAI Insights" />
                         </div>
                     </div>
                 </div>
