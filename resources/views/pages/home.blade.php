@@ -43,51 +43,188 @@ Main marketing page for CEIQ.
                 </p>
             </header>
 
-            <div class="storyline-card-wrapper">
-                <div class="storyline-insights">
-                    {{-- Text Content (Left on large screens) --}}
-                    <div class="insights-content">
-                        <span class="insights-eyebrow">How CEIQ Resolves the Storyline</span>
-                        <h3>Inventory Critical Actions, Not Just Feelings</h3>
-                        <p>
-                            We capture what stakeholders actually do, not just how they feel. This shift from sentiment
-                            to behavior gives you predictive power and measurable ROI.
-                        </p>
-                        <ul class="insights-list">
-                            <li>
-                                <svg class="insights-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                                </svg>
-                                <div>
-                                    <strong>Quantify the Unquantifiable</strong>
-                                    <p>Turn community engagement activities into measurable data points.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <svg class="insights-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                                </svg>
-                                <div>
-                                    <strong>Predictive Power</strong>
-                                    <p>Correlate engagement behaviors to attendance, retention, and outcomes.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <svg class="insights-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                                </svg>
-                                <div>
-                                    <strong>Justify Your Strategy</strong>
-                                    <p>Present evidence-based ROI to boards, funders, and stakeholders.</p>
-                                </div>
-                            </li>
-                        </ul>
+            {{-- Feature Slider --}}
+            <div class="feature-slider-wrapper" x-data="{ activeSlide: 0, totalSlides: 4, interval: null }"
+                 x-init="interval = setInterval(() => activeSlide = (activeSlide + 1) % totalSlides, 6000)"
+                 @mouseenter="clearInterval(interval)"
+                 @mouseleave="interval = setInterval(() => activeSlide = (activeSlide + 1) % totalSlides, 6000)">
+                <div class="feature-slider">
+                    {{-- Slide 1: Action-Level Data --}}
+                    <div class="feature-slide" x-show="activeSlide === 0" x-transition:enter="slide-enter" x-transition:leave="slide-leave">
+                        <div class="feature-slide-content">
+                            <p>
+                                We capture what stakeholders actually do, not just how they feel. This shift from sentiment
+                                to behavior gives you predictive power and measurable ROI.
+                            </p>
+                            <ul class="feature-checklist">
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    <div>
+                                        <strong>Quantify the Unquantifiable</strong>
+                                        <p>Turn community engagement activities into measurable data points.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    <div>
+                                        <strong>Predictive Power</strong>
+                                        <p>Correlate engagement behaviors to attendance, retention, and outcomes.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    <div>
+                                        <strong>Justify Your Strategy</strong>
+                                        <p>Present evidence-based ROI to boards, funders, and stakeholders.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-slide-image">
+                            <img src="{{ asset('images/slides/1.png') }}" alt="CEIQ Engagement Metrics Chart" />
+                        </div>
                     </div>
 
-                    {{-- Chart Image (Right on large screens) --}}
-                    <div class="insights-chart">
-                        <img src="{{ asset('images/chart.png') }}" alt="CEIQ Engagement Chart" />
+                    {{-- Slide 2: Dashboard Overview --}}
+                    <div class="feature-slide" x-show="activeSlide === 1" x-transition:enter="slide-enter" x-transition:leave="slide-leave">
+                        <div class="feature-slide-content">
+                            <p>
+                                Your central hub for tracking survey progress, monitoring response rates, and viewing real-time engagement insights across your entire organization.
+                            </p>
+                            <ul class="feature-checklist">
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    <div>
+                                        <strong>Survey Timeline Management</strong>
+                                        <p>Track preparation, active, and post-survey phases at a glance.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    <div>
+                                        <strong>Response Rate Tracking</strong>
+                                        <p>Monitor participation from students, parents, teachers, and leaders.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    <div>
+                                        <strong>Progress Highlights</strong>
+                                        <p>See your CEIQ stage breakdown with Initial, Developing, Achieving, and Sustaining metrics.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-slide-image">
+                            <img src="{{ asset('images/slides/2.png') }}" alt="CEIQ Dashboard Overview" />
+                        </div>
                     </div>
+
+                    {{-- Slide 3: CEIQ Matrix --}}
+                    <div class="feature-slide" x-show="activeSlide === 2" x-transition:enter="slide-enter" x-transition:leave="slide-leave">
+                        <div class="feature-slide-content">
+                            <p>
+                                Visualize engagement data across all stakeholder groups with our comprehensive matrix view. Identify patterns and prioritize areas for improvement.
+                            </p>
+                            <ul class="feature-checklist">
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    <div>
+                                        <strong>Cross-Stakeholder Analysis</strong>
+                                        <p>Compare responses from students, parents, staff, and teacher leaders.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    <div>
+                                        <strong>Areas of Influence</strong>
+                                        <p>Track Teaching & Learning, Safety, Community Climate, and Character Education.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    <div>
+                                        <strong>Color-Coded Insights</strong>
+                                        <p>Quickly identify strengths and opportunities with visual performance indicators.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-slide-image">
+                            <img src="{{ asset('images/slides/3.png') }}" alt="CEIQ Matrix View" />
+                        </div>
+                    </div>
+
+                    {{-- Slide 4: Student Results --}}
+                    <div class="feature-slide" x-show="activeSlide === 3" x-transition:enter="slide-enter" x-transition:leave="slide-leave">
+                        <div class="feature-slide-content">
+                            <p>
+                                Deep dive into stakeholder-specific results with detailed breakdowns, trend analysis, and actionable metrics that drive improvement.
+                            </p>
+                            <ul class="feature-checklist">
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    <div>
+                                        <strong>Stage-Based Progress</strong>
+                                        <p>Track movement from Initial through Sustaining stages over time.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    <div>
+                                        <strong>Key Metric Tracking</strong>
+                                        <p>Monitor Strong Relationships, Communication, Well-Being, and Inclusivity.</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <svg class="check-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                    </svg>
+                                    <div>
+                                        <strong>Period Comparisons</strong>
+                                        <p>See how metrics change from period to period with trend indicators.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feature-slide-image">
+                            <img src="{{ asset('images/slides/4.png') }}" alt="CEIQ Student Results Dashboard" />
+                        </div>
+                    </div>
+                </div>
+
+                {{-- Slider Dots --}}
+                <div class="feature-slider-dots">
+                    <template x-for="(slide, index) in totalSlides" :key="index">
+                        <button type="button"
+                                class="dot"
+                                :class="{ 'is-active': activeSlide === index }"
+                                @click="activeSlide = index"
+                                :aria-label="'Go to slide ' + (index + 1)">
+                        </button>
+                    </template>
                 </div>
             </div>
         </div>
@@ -148,25 +285,6 @@ Main marketing page for CEIQ.
                     Our AI-powered engine transforms raw engagement data into actionable insights,
                     stakeholder stories, and strategic recommendations.
                 </x-feature-card>
-            </div>
-
-            {{-- Platform Demo Carousel --}}
-            <div class="platform-demo">
-                <div class="platform-demo-header">
-                    <h3>See CEIQ in Action</h3>
-                    <p>Explore the dashboard that transforms engagement data into actionable insights.</p>
-                </div>
-                <div class="platform-carousel-wrapper">
-                    <x-carousel
-                        id="platform-carousel"
-                        :images="[
-                            ['src' => 'images/dashboard-1.png', 'alt' => 'CEIQ Dashboard - Overview'],
-                            ['src' => 'images/dashboard-2.png', 'alt' => 'CEIQ Dashboard - Analytics'],
-                            ['src' => 'images/dashboard-3.png', 'alt' => 'CEIQ Dashboard - Reports'],
-                        ]"
-                        :interval="5000"
-                    />
-                </div>
             </div>
         </div>
     </section>

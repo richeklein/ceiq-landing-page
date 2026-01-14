@@ -519,6 +519,97 @@ Provides consistent structure, styling, and navigation across all pages.
             gap: 1.25rem;
         }
 
+        /* --- Feature Slider --- */
+        .feature-slider-wrapper {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .feature-slider {
+            position: relative;
+            min-height: 400px;
+        }
+        .feature-slide {
+            background: white;
+            border-radius: 1.25rem;
+            padding: 2rem;
+            box-shadow: 0 20px 35px -15px rgba(15, 23, 42, 0.18);
+            border: 1px solid rgba(226, 232, 240, 0.6);
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        .feature-slide-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .feature-slide-content > p {
+            color: var(--color-text-medium);
+            line-height: 1.6;
+        }
+        .feature-checklist {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .feature-checklist li {
+            display: flex;
+            gap: 0.75rem;
+            align-items: flex-start;
+        }
+        .feature-checklist .check-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            flex-shrink: 0;
+            margin-top: 0.2rem;
+            color: var(--color-primary);
+        }
+        .feature-checklist strong {
+            display: block;
+            color: var(--color-text-dark);
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        .feature-checklist p {
+            margin-top: 0.25rem;
+            font-size: 0.9rem;
+            color: var(--color-text-medium);
+        }
+        .feature-slide-image {
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+        .feature-slide-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .feature-slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1.5rem 0 0;
+        }
+        .feature-slider-dots .dot {
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 9999px;
+            border: none;
+            background-color: var(--color-muted);
+            cursor: pointer;
+            transition: background-color 0.2s ease, width 0.2s ease;
+        }
+        .feature-slider-dots .dot:hover {
+            background-color: var(--color-primary);
+        }
+        .feature-slider-dots .dot.is-active {
+            background-color: var(--color-primary);
+            width: 1.25rem;
+        }
+
         /* --- Carousel --- */
         .carousel { width: 100%; }
         .carousel-track { position: relative; overflow: hidden; }
@@ -936,6 +1027,11 @@ Provides consistent structure, styling, and navigation across all pages.
                 align-items: start;
             }
             .insights-chart { margin-bottom: 0; }
+            .feature-slide {
+                grid-template-columns: 1fr 2fr;
+                align-items: center;
+            }
+            .feature-slider { min-height: 350px; }
             .resources-grid { grid-template-columns: 1fr 1fr; }
             .footer-links-grid { grid-template-columns: repeat(3, 1fr); }
             .footer-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
