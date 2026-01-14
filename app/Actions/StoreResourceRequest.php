@@ -2,6 +2,7 @@
 
 namespace App\Actions;
 
+use App\Mail\ImpactBriefRequestNotification;
 use App\Mail\ResourceRequestMail;
 use App\Models\ResourceRequest;
 use Illuminate\Support\Facades\Mail;
@@ -24,6 +25,9 @@ class StoreResourceRequest
 
         Mail::to($resourceRequest->email)
             ->send(new ResourceRequestMail($resourceRequest));
+
+        Mail::to('info@ceiqinc.com')
+            ->send(new ImpactBriefRequestNotification($resourceRequest));
 
         $resourceRequest->update(['email_sent_at' => now()]);
 

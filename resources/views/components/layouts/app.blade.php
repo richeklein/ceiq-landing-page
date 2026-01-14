@@ -778,15 +778,19 @@ Provides consistent structure, styling, and navigation across all pages.
             margin-bottom: 0.5rem;
         }
         .resources .section-header p { margin-top: 1rem; color: var(--color-text-medium); }
-        .resources-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+        .resources-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; justify-items: center; }
         .resource-highlight {
             background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(15, 23, 42, 0.08));
             border: 1px solid rgba(37, 99, 235, 0.15);
             border-radius: 1.25rem;
-            padding: 2rem;
+            padding: 2.5rem;
+            max-width: 560px;
+            width: 100%;
+            text-align: center;
         }
-        .resource-highlight h3 { font-size: 1.5rem; }
-        .resource-form { margin-top: 1.5rem; display: grid; gap: 1rem; }
+        .resource-highlight h3 { font-size: 1.75rem; margin-bottom: 0.75rem; }
+        .resource-highlight > p { color: var(--color-text-medium); font-size: 1.1rem; }
+        .resource-form { margin-top: 1.5rem; display: grid; gap: 1rem; text-align: left; }
         .resource-form .form-row { display: grid; gap: 1rem; }
         .resource-form input, .resource-form select {
             width: 100%;
@@ -1041,7 +1045,6 @@ Provides consistent structure, styling, and navigation across all pages.
                 align-items: start;
             }
             .feature-slider { min-height: 350px; }
-            .resources-grid { grid-template-columns: 1fr 1fr; }
             .footer-grid { grid-template-columns: 1fr auto; gap: 3rem; }
             .approach-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
             .legal-content { grid-template-columns: 220px 1fr; gap: 3rem; }

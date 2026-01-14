@@ -399,7 +399,7 @@ Main marketing page for CEIQ.
     </section>
 
     {{-- Resources Section --}}
-    <section class="resources" id="weekly-resources">
+    {{-- <section class="resources" id="weekly-resources">
         <div class="container">
             <div class="section-header">
                 <p class="subtitle">Resources</p>
@@ -479,40 +479,10 @@ Main marketing page for CEIQ.
                         <button type="submit" class="btn btn-primary">Send me the Impact Brief</button>
                     </form>
 
-                    <div class="resource-preview">
-                        <h4>Free Preview: Action Gap Radar</h4>
-                        <p>See a sample of our engagement analytics in action.</p>
-                        <a href="#" class="btn btn-secondary">Download Free Preview</a>
-                        <small>You will also receive our Proof of Practice newsletter.</small>
-                    </div>
-                </div>
-
-                <div class="blog-showcase">
-                    <h3>Latest "Proof of Practice" articles</h3>
-                    <div class="blog-cards">
-                        <div class="blog-card">
-                            <span class="blog-tag">Research</span>
-                            <h4><a href="#">Why Satisfaction Surveys Miss the Mark</a></h4>
-                            <p>How action-level data reveals what sentiment can't.</p>
-                            <a href="#" class="btn-link">Read article &rarr;</a>
-                        </div>
-                        <div class="blog-card">
-                            <span class="blog-tag">Case Study</span>
-                            <h4><a href="#">Lincoln USD: From Surveys to Strategy</a></h4>
-                            <p>How one district used CEIQ to justify a $2M engagement initiative.</p>
-                            <a href="#" class="btn-link">Read article &rarr;</a>
-                        </div>
-                        <div class="blog-card">
-                            <span class="blog-tag">Guide</span>
-                            <h4><a href="#">The ROI of Community Engagement</a></h4>
-                            <p>A framework for measuring what matters most.</p>
-                            <a href="#" class="btn-link">Read article &rarr;</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
 
     {{-- CTA Section --}}
