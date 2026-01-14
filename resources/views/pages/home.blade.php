@@ -43,40 +43,50 @@ Main marketing page for CEIQ.
                 </p>
             </header>
 
-            <div class="solutions-content">
-                <div class="solutions-grid">
-                    <div class="solution-item">
-                        <div class="solution-icon">
-                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <strong>Quantify the Unquantifiable</strong>
-                            <p>Turn community engagement activities into measurable data points.</p>
-                        </div>
+            <div class="storyline-card-wrapper">
+                <div class="storyline-insights">
+                    {{-- Text Content (Left on large screens) --}}
+                    <div class="insights-content">
+                        <span class="insights-eyebrow">How CEIQ Resolves the Storyline</span>
+                        <h3>Inventory Critical Actions, Not Just Feelings</h3>
+                        <p>
+                            We capture what stakeholders actually do, not just how they feel. This shift from sentiment
+                            to behavior gives you predictive power and measurable ROI.
+                        </p>
+                        <ul class="insights-list">
+                            <li>
+                                <svg class="insights-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                                <div>
+                                    <strong>Quantify the Unquantifiable</strong>
+                                    <p>Turn community engagement activities into measurable data points.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <svg class="insights-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                                <div>
+                                    <strong>Predictive Power</strong>
+                                    <p>Correlate engagement behaviors to attendance, retention, and outcomes.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <svg class="insights-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                    <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                                </svg>
+                                <div>
+                                    <strong>Justify Your Strategy</strong>
+                                    <p>Present evidence-based ROI to boards, funders, and stakeholders.</p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="solution-item">
-                        <div class="solution-icon">
-                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <strong>Predictive Power</strong>
-                            <p>Correlate engagement behaviors to attendance, retention, and outcomes.</p>
-                        </div>
-                    </div>
-                    <div class="solution-item">
-                        <div class="solution-icon">
-                            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <strong>Justify Your Strategy</strong>
-                            <p>Present evidence-based ROI to boards, funders, and stakeholders.</p>
-                        </div>
+
+                    {{-- Chart Image (Right on large screens) --}}
+                    <div class="insights-chart">
+                        <img src="{{ asset('images/chart.png') }}" alt="CEIQ Engagement Chart" />
                     </div>
                 </div>
             </div>

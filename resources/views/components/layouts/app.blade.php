@@ -472,6 +472,17 @@ Provides consistent structure, styling, and navigation across all pages.
         .storyline-carousel-wrapper .carousel-track { border-radius: 1rem; box-shadow: var(--shadow-lg); background: #ffffff; }
         .storyline-carousel-wrapper .carousel-slide img { border-radius: 1rem; }
         .storyline-carousel-wrapper .carousel-dots { padding-top: 1rem; padding-bottom: 0; background: #ffffff; }
+        .storyline-image {
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        .storyline-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 1rem;
+        }
         .storyline-insights {
             background: white;
             color: var(--color-text-dark);
@@ -490,6 +501,23 @@ Provides consistent structure, styling, and navigation across all pages.
         .insights-list strong { display: block; color: var(--color-text-dark); font-size: 1rem; }
         .insights-list p { margin-top: 0.25rem; font-weight: 400; color: var(--color-text-medium); }
         .insights-icon { width: 1rem; margin-top: 0.35rem; color: var(--color-primary); }
+        .storyline-card-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .insights-chart {
+            margin-bottom: 1.5rem;
+        }
+        .insights-chart img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.75rem;
+        }
+        .insights-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
 
         /* --- Carousel --- */
         .carousel { width: 100%; }
@@ -901,6 +929,13 @@ Provides consistent structure, styling, and navigation across all pages.
             .hero-content p { margin-left: 0; margin-right: 0; }
             .hero-actions { justify-content: flex-start; }
             .storyline-grid { grid-template-columns: 1fr 1fr; }
+            .storyline-insights {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+                align-items: start;
+            }
+            .insights-chart { margin-bottom: 0; }
             .resources-grid { grid-template-columns: 1fr 1fr; }
             .footer-links-grid { grid-template-columns: repeat(3, 1fr); }
             .footer-grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
