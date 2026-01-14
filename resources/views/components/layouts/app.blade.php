@@ -47,7 +47,7 @@ Provides consistent structure, styling, and navigation across all pages.
         }
 
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
+        html, body { scroll-behavior: smooth; }
         body {
             font-family: var(--font-family-sans);
             background-color: var(--color-light-bg);
