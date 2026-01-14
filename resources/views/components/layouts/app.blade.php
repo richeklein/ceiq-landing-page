@@ -562,6 +562,12 @@ Provides consistent structure, styling, and navigation across all pages.
             flex-direction: column;
             gap: 1rem;
         }
+        .slide-header {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--color-text-dark);
+            margin: 0;
+        }
         .feature-slide-content > p {
             color: var(--color-text-medium);
             line-height: 1.6;

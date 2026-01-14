@@ -52,6 +52,7 @@ Main marketing page for CEIQ.
                     {{-- Slide 1: Action-Level Data --}}
                     <div class="feature-slide" :class="{ 'is-active': activeSlide === 0 }">
                         <div class="feature-slide-content">
+                            <h3 class="slide-header">Beyond Sentiment</h3>
                             <p>
                                 We capture what stakeholders actually do, not just how they feel. This shift from sentiment
                                 to behavior gives you predictive power and measurable ROI.
@@ -94,6 +95,7 @@ Main marketing page for CEIQ.
                     {{-- Slide 2: Dashboard Overview --}}
                     <div class="feature-slide" :class="{ 'is-active': activeSlide === 1 }">
                         <div class="feature-slide-content">
+                            <h3 class="slide-header">Your Command Center</h3>
                             <p>
                                 Your central hub for tracking survey progress, monitoring response rates, and viewing real-time engagement insights across your entire organization.
                             </p>
@@ -135,6 +137,7 @@ Main marketing page for CEIQ.
                     {{-- Slide 3: CEIQ Matrix --}}
                     <div class="feature-slide" :class="{ 'is-active': activeSlide === 2 }">
                         <div class="feature-slide-content">
+                            <h3 class="slide-header">The CEIQ Matrix</h3>
                             <p>
                                 Visualize engagement data across all stakeholder groups with our comprehensive matrix view. Identify patterns and prioritize areas for improvement.
                             </p>
@@ -176,6 +179,7 @@ Main marketing page for CEIQ.
                     {{-- Slide 4: Student Results --}}
                     <div class="feature-slide" :class="{ 'is-active': activeSlide === 3 }">
                         <div class="feature-slide-content">
+                            <h3 class="slide-header">Stakeholder Insights</h3>
                             <p>
                                 Deep dive into stakeholder-specific results with detailed breakdowns, trend analysis, and actionable metrics that drive improvement.
                             </p>
@@ -217,6 +221,7 @@ Main marketing page for CEIQ.
                     {{-- Slide 5: EmpowerAI --}}
                     <div class="feature-slide" :class="{ 'is-active': activeSlide === 4 }">
                         <div class="feature-slide-content">
+                            <h3 class="slide-header">EmpowerAI</h3>
                             <p>
                                 EmpowerAI analyzes data across your entire CEIQ platform, cross-referencing institutional goals and state requirements to deliver actionable insights tailored to your district.
                             </p>
