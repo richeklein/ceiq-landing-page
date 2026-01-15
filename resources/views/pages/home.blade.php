@@ -402,7 +402,7 @@ Main marketing page for CEIQ.
     <section class="resources" id="weekly-resources">
         <div class="container">
             <div class="section-header">
-                <p class="subtitle">Resources</p>
+                <p class="subtitle">Newsletter</p>
                 <h2>CEIQ Impact Brief</h2>
             </div>
 
@@ -410,8 +410,7 @@ Main marketing page for CEIQ.
                 <div class="resource-highlight">
                     <h3>Request the CEIQ Impact Brief</h3>
                     <p>
-                        Get our comprehensive guide to measuring community engagement ROI,
-                        including templates and checklists.
+                        Get our latest updates and insights on community engagement and practical strategies delivered straight to your inbox.
                     </p>
 
                     @if(session('success'))
@@ -474,7 +473,7 @@ Main marketing page for CEIQ.
                         @enderror
                         <label class="resource-checkbox">
                             <input type="checkbox" name="preview" value="1" {{ old('preview', true) ? 'checked' : '' }} />
-                            <span>Send me the resource via email and add me to the CEIQ Proof of Practice newsletter (you can unsubscribe anytime).</span>
+                            <span>Send me the CEIQ Impact Brief newsletter (you can unsubscribe at any time)</span>
                         </label>
                         <button type="submit" class="btn btn-primary">Send me the Impact Brief</button>
                     </form>

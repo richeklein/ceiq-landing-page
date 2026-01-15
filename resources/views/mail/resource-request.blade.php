@@ -34,8 +34,8 @@ Sent when users submit the Impact Brief request form.
 
         @if($resourceRequest->wants_preview)
         <p style="margin: 2rem 0; text-align: center;">
-            <a href="#" style="display: inline-block; background-color: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600;">
-                Download Your Impact Brief
+            <a href="{{ url('newsletter/CEIQ_Impact_Newsletter.pdf') }}" style="display: inline-block; background-color: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600;">
+                Download the CEIQ Impact Brief
             </a>
         </p>
         @endif

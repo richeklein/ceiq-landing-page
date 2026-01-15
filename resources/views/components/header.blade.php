@@ -11,6 +11,7 @@ Includes sticky positioning and backdrop blur.
             <a href="#platform">Platform</a>
             <a href="#difference">CEIQ Difference</a>
             <a href="#values">Values</a>
+            <a href="#weekly-resources">Newsletter</a>
         </nav>
         <div class="header-actions">
             {{-- <a href="#" class="btn btn-tertiary btn-compact">Log in</a> --}}
@@ -35,6 +36,7 @@ Includes sticky positioning and backdrop blur.
             <a href="#platform" @click="mobileMenuOpen = false">Platform</a>
             <a href="#difference" @click="mobileMenuOpen = false">CEIQ Difference</a>
             <a href="#values" @click="mobileMenuOpen = false">Values</a>
+            <a href="#weekly-resources" @click="mobileMenuOpen = false">Newsletter</a>
         </nav>
         <div class="header-actions-mobile">
             {{-- <a href="#" class="btn btn-tertiary btn-compact">Log in</a> --}}

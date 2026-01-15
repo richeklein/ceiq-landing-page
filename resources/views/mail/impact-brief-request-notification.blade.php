@@ -51,16 +51,7 @@ Contains the requester's details for follow-up.
             </tr>
         </table>
 
-        <p style="margin: 2rem 0; text-align: center;">
-            <a href="#" style="display: inline-block; background-color: #2563eb; color: white; padding: 0.75rem 1.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600;">
-                View Impact Brief (Placeholder)
-            </a>
-        </p>
-
-        <p style="color: #6b7280; font-size: 0.875rem; margin-top: 1.5rem;">
-            Please follow up with this person to provide them with the CEIQ Impact Brief.
-        </p>
-
+        
         <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 2rem 0;">
 
         <p style="color: #9ca3af; font-size: 0.75rem;">
