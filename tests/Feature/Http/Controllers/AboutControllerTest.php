@@ -5,7 +5,7 @@ use function Pest\Laravel\get;
 test('about page renders successfully', function () {
     get(route('about'))
         ->assertOk()
-        ->assertSee('Actionable Intelligence');
+        ->assertSee('Why We Built CEIQ');
 });
 
 test('about page contains story section', function () {

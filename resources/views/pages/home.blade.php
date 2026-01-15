@@ -399,7 +399,7 @@ Main marketing page for CEIQ.
     </section>
 
     {{-- Resources Section --}}
-    {{-- <section class="resources" id="weekly-resources">
+    <section class="resources" id="weekly-resources">
         <div class="container">
             <div class="section-header">
                 <p class="subtitle">Resources</p>
@@ -482,7 +482,7 @@ Main marketing page for CEIQ.
                 </div>
             </div>
         </div>
-    </section> --}}
+    </section>
 
 
     {{-- CTA Section --}}

@@ -21,9 +21,9 @@ test('home page contains features section', function () {
         ->assertSee('Action-Level Intelligence');
 });
 
-test('home page contains resource request form', function () {
+test('home page contains CTA section', function () {
     get(route('home'))
         ->assertOk()
-        ->assertSee('CEIQ Impact Brief')
-        ->assertSee('name="email"', escape: false);
+        ->assertSee('Ready to Transform Your School or District?')
+        ->assertSee('Schedule Your Demo');
 });
