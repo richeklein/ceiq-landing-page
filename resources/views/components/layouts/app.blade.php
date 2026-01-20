@@ -592,6 +592,7 @@ Provides consistent structure, styling, and navigation across all pages.
             border-radius: 0.75rem;
             overflow: hidden;
             box-shadow: var(--shadow-md);
+            border: 1px solid rgba(15, 23, 42, 0.12);
         }
         .feature-slide-image img {
             width: 100%;
@@ -605,8 +606,8 @@ Provides consistent structure, styling, and navigation across all pages.
             padding: 1.5rem 0 0;
         }
         .feature-slider-dots .dot {
-            width: 0.5rem;
-            height: 0.5rem;
+            width: 0.625rem;
+            height: 0.625rem;
             border-radius: 9999px;
             border: none;
             background-color: var(--color-muted);
@@ -618,7 +619,7 @@ Provides consistent structure, styling, and navigation across all pages.
         }
         .feature-slider-dots .dot.is-active {
             background-color: var(--color-primary);
-            width: 1.25rem;
+            width: 1.5rem;
         }
 
         /* --- Carousel --- */
@@ -664,6 +665,7 @@ Provides consistent structure, styling, and navigation across all pages.
             padding: 1.75rem;
             border-radius: 1rem;
             box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(15, 23, 42, 0.12);
             transition: box-shadow 0.3s ease, transform 0.3s ease;
         }
         .feature-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }

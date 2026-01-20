@@ -16,7 +16,7 @@ Main marketing page for CEIQ.
                         platform
                     </h1>
                     <p>
-                        CEIQ bridges the gap between community engagement data and measurable student
+                        Community Engagement IQ (CEIQ) bridges the gap between community engagement data and measurable student
                         success. K-12 leaders finally have a data-driven blueprint to prove impact,
                         justify funding, and scale what works.
                     </p>
@@ -45,9 +45,9 @@ Main marketing page for CEIQ.
 
             {{-- Feature Slider --}}
             <div class="feature-slider-wrapper" x-data="{ activeSlide: 0, totalSlides: 5, interval: null }"
-                 x-init="interval = setInterval(() => activeSlide = (activeSlide + 1) % totalSlides, 6000)"
+                 x-init="interval = setInterval(() => activeSlide = (activeSlide + 1) % totalSlides, 8000)"
                  @mouseenter="clearInterval(interval)"
-                 @mouseleave="interval = setInterval(() => activeSlide = (activeSlide + 1) % totalSlides, 6000)">
+                 @mouseleave="interval = setInterval(() => activeSlide = (activeSlide + 1) % totalSlides, 8000)">
                 <div class="feature-slider">
                     {{-- Slide 1: Action-Level Data --}}
                     <div class="feature-slide" :class="{ 'is-active': activeSlide === 0 }">
