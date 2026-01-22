@@ -11,7 +11,7 @@ Company overview and mission for CEIQ.
                 <h2>Built by Educators, for Educators</h2>
             </div>
             <div class="about-us-image">
-                <img src="{{ asset('images/ceiq-about-us.jpg') }}" alt="CEIQ Team collaborating" />
+                <img src="{{ asset('images/ceiq-about-us.webp') }}" alt="CEIQ Team collaborating" />
             </div>
             <div class="story-content">
                 <p>
