@@ -123,8 +123,18 @@ Provides consistent structure, styling, and navigation across all pages.
         .logo { display: flex; align-items: center; gap: 0.5rem; }
         .logo img { height: 28px; width: auto; object-fit: contain; }
         .nav-links { display: none; }
-        .nav-links a { color: var(--color-text-medium); font-weight: 600; padding: 0.25rem 0.5rem; }
+        .nav-links a {
+            color: var(--color-text-medium);
+            font-weight: 600;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.375rem;
+            transition: color 0.2s ease, background-color 0.2s ease;
+        }
         .nav-links a:hover { color: var(--color-primary); }
+        .nav-links a.is-active {
+            color: var(--color-primary);
+            background-color: rgba(37, 99, 235, 0.08);
+        }
         .header-actions { display: none; }
         .mobile-menu-button {
             display: flex;
@@ -161,6 +171,11 @@ Provides consistent structure, styling, and navigation across all pages.
             transition: color 0.2s ease, background-color 0.2s ease;
         }
         #mobile-menu .nav-links-mobile a:hover { color: var(--color-primary); background-color: #f3f4f6; }
+        #mobile-menu .nav-links-mobile a.is-active {
+            color: var(--color-primary);
+            background-color: rgba(37, 99, 235, 0.08);
+            font-weight: 600;
+        }
         #mobile-menu .header-actions-mobile {
             border-top: 1px solid #e5e7eb;
             padding: 1rem 1.25rem;
