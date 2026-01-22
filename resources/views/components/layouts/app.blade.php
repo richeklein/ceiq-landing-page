@@ -121,7 +121,7 @@ Provides consistent structure, styling, and navigation across all pages.
         }
         .header-container { display: flex; align-items: center; justify-content: space-between; height: 4rem; }
         .logo { display: flex; align-items: center; gap: 0.5rem; }
-        .logo img { height: 28px; width: auto; object-fit: contain; }
+        .logo img { height: 36px; width: auto; object-fit: contain; }
         .nav-links { display: none; }
         .nav-links a {
             color: var(--color-text-medium);
