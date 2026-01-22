@@ -910,6 +910,18 @@ Provides consistent structure, styling, and navigation across all pages.
         .story-content { max-width: 48rem; margin: 0 auto; }
         .story-content p { margin-bottom: 1.5rem; font-size: 1.125rem; line-height: 1.8; }
         .story-content p:last-child { margin-bottom: 0; }
+        .about-us-image {
+            max-width: 48rem;
+            margin: 0 auto 2.5rem;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+        .about-us-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
         .values-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
         .value-card {
             background: white;

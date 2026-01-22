@@ -8,10 +8,11 @@ Includes sticky positioning and backdrop blur.
             <img src="{{ asset('images/logo.png') }}" alt="CEIQ Logo" />
         </a>
         <nav class="nav-links">
-            <a href="#platform">Platform</a>
-            <a href="#difference">CEIQ Difference</a>
-            <a href="#values">Values</a>
-            <a href="#weekly-resources">Newsletter</a>
+            <a href="{{ route('home') }}#platform">Platform</a>
+            <a href="{{ route('home') }}#difference">CEIQ Difference</a>
+            <a href="{{ route('home') }}#values">Values</a>
+            <a href="{{ route('home') }}#weekly-resources">Newsletter</a>
+            <a href="{{ route('about-us') }}">About Us</a>
         </nav>
         <div class="header-actions">
             {{-- <a href="#" class="btn btn-tertiary btn-compact">Log in</a> --}}
@@ -33,10 +34,11 @@ Includes sticky positioning and backdrop blur.
          :class="{ 'is-open': mobileMenuOpen }"
          @keydown.escape.window="mobileMenuOpen = false">
         <nav class="nav-links-mobile">
-            <a href="#platform" @click="mobileMenuOpen = false">Platform</a>
-            <a href="#difference" @click="mobileMenuOpen = false">CEIQ Difference</a>
-            <a href="#values" @click="mobileMenuOpen = false">Values</a>
-            <a href="#weekly-resources" @click="mobileMenuOpen = false">Newsletter</a>
+            <a href="{{ route('home') }}#platform" @click="mobileMenuOpen = false">Platform</a>
+            <a href="{{ route('home') }}#difference" @click="mobileMenuOpen = false">CEIQ Difference</a>
+            <a href="{{ route('home') }}#values" @click="mobileMenuOpen = false">Values</a>
+            <a href="{{ route('home') }}#weekly-resources" @click="mobileMenuOpen = false">Newsletter</a>
+            <a href="{{ route('about-us') }}" @click="mobileMenuOpen = false">About Us</a>
         </nav>
         <div class="header-actions-mobile">
             {{-- <a href="#" class="btn btn-tertiary btn-compact">Log in</a> --}}
