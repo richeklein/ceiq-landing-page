@@ -520,16 +520,15 @@ Provides consistent structure, styling, and navigation across all pages.
             margin: 0 auto;
         }
         .feature-slider {
-            position: relative;
-            min-height: 400px;
+            display: grid;
             overflow: hidden;
         }
         .feature-slide {
-            position: absolute;
-            inset: 0;
+            grid-area: 1 / 1;
             opacity: 0;
+            visibility: hidden;
             transform: scale(0.985);
-            transition: opacity 400ms ease, transform 400ms ease;
+            transition: opacity 400ms ease, transform 400ms ease, visibility 400ms ease;
             background: white;
             border-radius: 1.25rem;
             padding: 2rem;
@@ -540,8 +539,8 @@ Provides consistent structure, styling, and navigation across all pages.
             gap: 2rem;
         }
         .feature-slide.is-active {
-            position: relative;
             opacity: 1;
+            visibility: visible;
             transform: scale(1);
         }
         .feature-slide-content {
@@ -1058,7 +1057,6 @@ Provides consistent structure, styling, and navigation across all pages.
                 grid-template-columns: 1fr 2fr;
                 align-items: start;
             }
-            .feature-slider { min-height: 350px; }
             .footer-grid { grid-template-columns: 1fr auto; gap: 3rem; }
             .approach-grid { grid-template-columns: 1fr 1fr; gap: 3rem; }
             .legal-content { grid-template-columns: 220px 1fr; gap: 3rem; }
