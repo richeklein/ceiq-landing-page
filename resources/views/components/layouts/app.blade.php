@@ -845,14 +845,14 @@ Provides consistent structure, styling, and navigation across all pages.
         .resource-preview small { display: inline-block; margin-top: 0.75rem; color: var(--color-text-light); }
         .resource-checkbox {
             display: grid;
-            grid-template-columns: 1.15rem 1fr;
-            column-gap: 0.6rem;
-            align-items: center;
+            grid-template-columns: 1.25rem 1fr;
+            column-gap: 0.75rem;
+            align-items: start;
             font-size: 0.95rem;
             color: var(--color-text-medium);
         }
-        .resource-checkbox input { margin-top: 0; width: 1.15rem; height: 1.15rem; accent-color: var(--color-primary); }
-        .resource-checkbox span { line-height: 1.4; }
+        .resource-checkbox input { margin-top: 0.15rem; width: 1.25rem; height: 1.25rem; accent-color: var(--color-primary); flex-shrink: 0; }
+        .resource-checkbox span { line-height: 1.5; }
         .blog-showcase {
             background: #ffffff;
             color: var(--color-text-dark);
