@@ -2,13 +2,16 @@
 About Us page.
 Company overview and mission for CEIQ.
 --}}
-<x-layouts.app title="About Us | CEIQ - Community Engagement Intelligence for K-12">
+<x-layouts.app
+    title="About Us | CEIQ - Community Engagement Intelligence for K-12"
+    description="Learn about CEIQ - a Florida Benefit Corporation built by educators for educators. Discover our mission to empower K-12 communities through data-driven insights."
+>
     {{-- About Us Section --}}
     <section class="about-section">
         <div class="container">
             <div class="section-header">
                 <p class="subtitle">About Us</p>
-                <h2>Built by Educators, for Educators</h2>
+                <h1>Built by Educators, for Educators</h1>
             </div>
             <div class="about-us-image">
                 <img src="{{ asset('images/ceiq-about-us.webp') }}" alt="CEIQ Team collaborating" />

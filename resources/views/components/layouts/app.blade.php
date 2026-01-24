@@ -2,7 +2,11 @@
 Main application layout.
 Provides consistent structure, styling, and navigation across all pages.
 --}}
-@props(['title' => 'CEIQ | Community Engagement Intelligence for K-12'])
+@props([
+    'title' => 'CEIQ | Community Engagement Intelligence for K-12',
+    'description' => 'CEIQ is the data-driven community engagement platform for K-12 education. Measure stakeholder actions, prove ROI, and transform engagement into student success.',
+    'ogImage' => null
+])
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +15,24 @@ Provides consistent structure, styling, and navigation across all pages.
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ $title }}</title>
+    <meta name="description" content="{{ $description }}">
+
+    {{-- Canonical URL --}}
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    {{-- Open Graph Meta Tags --}}
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="{{ $title }}">
+    <meta property="og:description" content="{{ $description }}">
+    <meta property="og:image" content="{{ $ogImage ?? asset('images/hero-3.webp') }}">
+    <meta property="og:site_name" content="CEIQ">
+
+    {{-- Twitter Card Meta Tags --}}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $title }}">
+    <meta name="twitter:description" content="{{ $description }}">
+    <meta name="twitter:image" content="{{ $ogImage ?? asset('images/hero-3.webp') }}">
 
     {{-- Favicons --}}
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/favicons/apple-touch-icon.png') }}">
@@ -1088,6 +1110,44 @@ Provides consistent structure, styling, and navigation across all pages.
 
         {{ $styles ?? '' }}
     </style>
+
+    {{-- JSON-LD Structured Data --}}
+    <script type="application/ld+json">
+    {
+        "@@context": "https://schema.org",
+        "@@type": "Organization",
+        "name": "CEIQ",
+        "url": "{{ config('app.url') }}",
+        "logo": "{{ asset('images/logo.png') }}",
+        "description": "Community Engagement Intelligence platform for K-12 education",
+        "foundingDate": "2024",
+        "sameAs": []
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@@context": "https://schema.org",
+        "@@type": "WebSite",
+        "name": "CEIQ",
+        "url": "{{ config('app.url') }}"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@@context": "https://schema.org",
+        "@@type": "SoftwareApplication",
+        "name": "CEIQ",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "Community Engagement Intelligence platform for K-12 education. Measure stakeholder actions and prove ROI.",
+        "offers": {
+            "@@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/ContactForPrice"
+        }
+    }
+    </script>
 </head>
 <body>
     <x-header />

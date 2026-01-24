@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\DemoRequestController;
 use App\Http\Controllers\HomeController;
@@ -11,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 
 // Static pages
 Route::get('/', HomeController::class)->name('home');
-Route::get('/about', AboutController::class)->name('about');
+Route::redirect('/about', '/about-us', 301);
 Route::get('/about-us', AboutUsController::class)->name('about-us');
 Route::get('/terms', TermsController::class)->name('terms');
 Route::get('/privacy', PrivacyController::class)->name('privacy');
