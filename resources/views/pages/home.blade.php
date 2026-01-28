@@ -403,9 +403,16 @@ Main marketing page for CEIQ.
         <div class="container">
             <div class="section-header">
                 <p class="subtitle">Newsletter</p>
-                <h2>CEIQ Impact Brief</h2>
+                {{-- <h2>CEIQ Impact Brief</h2> --}}
             </div>
 
+            <div class="resources-grid">
+                <div class="resource-highlight">
+                    <iframe src="https://ceiq.substack.com/embed" width="480" height="320" style="border:none; background:transparent; border-radius:8px;" frameborder="0" scrolling="no"></iframe>
+                </div>
+            </div>
+
+            {{-- Old newsletter form (kept for reference)
             <div class="resources-grid">
                 <div class="resource-highlight">
                     <h3>Request the CEIQ Impact Brief</h3>
@@ -480,6 +487,7 @@ Main marketing page for CEIQ.
 
                 </div>
             </div>
+            --}}
         </div>
     </section>
 
