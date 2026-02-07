@@ -407,8 +407,8 @@ Main marketing page for CEIQ.
             </div>
 
             <div class="resources-grid">
-                <div class="resource-highlight">
-                    <iframe src="https://ceiq.substack.com/embed" width="480" height="320" style="border:none; background:transparent; border-radius:8px;" frameborder="0" scrolling="no"></iframe>
+                <div style="display:flex; justify-content:center;">
+                    <iframe src="https://ceiq.substack.com/embed" width="480" height="600" style="border:none; background:transparent; border-radius:8px; max-width:100%;" frameborder="0" scrolling="no"></iframe>
                 </div>
             </div>
 
