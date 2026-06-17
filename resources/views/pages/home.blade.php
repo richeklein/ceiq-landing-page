@@ -282,7 +282,7 @@ Main marketing page for CEIQ.
             <div class="section-header">
                 <p class="subtitle">The CEIQ Difference</p>
                 <h2>
-                    Stakeholder Intelligence. <span class="highlight">Elevated.</span><br />
+                    Stakeholder Engagement. <span class="highlight">Elevated.</span><br />
                     Community Empowerment. <span class="highlight">Achieved.</span>
                 </h2>
                 <p>
